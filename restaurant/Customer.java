@@ -9,6 +9,9 @@ public class Customer {
     private ArrayList<Food> orderList;
     private Food Order;
 
+
+    //need constructor
+
     public Food getOrder(){
 
         //default change later
