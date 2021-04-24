@@ -20,5 +20,13 @@ public class Main {
         loot.add(new Food(13, 4, "Tacos", "tacoPicture"));
         loot.add(new Food(2, 3, "Soda", "sodaPicture"));
         loot.add(new Food(7, 3, "Milkshake", "milkshakePicture"));
+
+
+
+        //main menu testing will start here
+
+
+        //main menu testing end here
     }
+
 }
