@@ -1,3 +1,4 @@
+package restaurant;
 
 public class Food implements Consumables{
 
@@ -5,7 +6,13 @@ public class Food implements Consumables{
     private String Rarity;
     private String Name;
     private String pictureLocation;
-
+    public Food(double price, String rarity, String name, String pictureLocation)
+    {
+        this.Price = price;
+        this.Rarity = rarity;
+        this.Name = name;
+        this.pictureLocation = pictureLocation;
+    }
     @Override
     public double getPrice() {
         

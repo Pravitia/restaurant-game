@@ -1,3 +1,5 @@
+package restaurant;
+
 import java.util.ArrayList;
 
 public class Player {
@@ -8,7 +10,7 @@ public class Player {
     private double moneyMade;
 
     private void addFood(Food f){
-
+        Inventory.add(f);
 
     }
 

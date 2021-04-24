@@ -1,3 +1,5 @@
+package restaurant;
+
 public interface Consumables {
 
     public double getPrice();
