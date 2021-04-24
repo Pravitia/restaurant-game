@@ -5,8 +5,8 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList<Food> loot = new ArrayList<Food>();
-        loot.add(new Food(25, 5, "Steak", "steakPicture"));
+        ArrayList<Food> loot = new ArrayList<>();
+        loot.add(new Food(25, 5, "Steak", "images/steakPicture"));
         loot.add(new Food(18, 4, "Rotisserie Chicken", "chickenPicture"));
         loot.add(new Food(1.50, 3, "Hotdog", "hotdogPicture"));
         loot.add(new Food(15, 4, "Burger", "burgerPicture"));
