@@ -25,6 +25,11 @@ public class Player {
         this.moneyMade += moneyEarned;
     }
 
+    public double getMoneyMade()
+    {
+        return moneyMade;
+    }
+
 
     
 
