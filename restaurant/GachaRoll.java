@@ -15,6 +15,6 @@ public class GachaRoll {
 
     public Food getRandomFood()
     {
-        return foodPool.get(rand.nextInt(foodPool.size()));;
+        return foodPool.get(rand.nextInt(foodPool.size()));
     }
 }
