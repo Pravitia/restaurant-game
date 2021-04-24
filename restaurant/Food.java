@@ -24,6 +24,16 @@ public class Food implements Consumables{
         return this.Name;
     }
 
+    public String getRarity()
+    {
+        return Rarity;
+    }
+
+    public String getPictureLocation()
+    {
+        return pictureLocation;
+    }
+
 
 
 

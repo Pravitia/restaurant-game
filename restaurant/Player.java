@@ -6,9 +6,15 @@ public class Player {
 
     private String Name;
     private ArrayList<Food> Inventory;
-    private double Balance = 50.00;
+    private double Balance;
     private double moneyMade;
-
+    public Player(String name)
+    {
+        this.Name = name;
+        this.Inventory = new ArrayList<>();
+        this.Balance = 0;
+        this.moneyMade = 0;
+    }
     private void addFood(Food f){
         Inventory.add(f);
 
@@ -31,7 +37,10 @@ public class Player {
     }
 
 
-    
+    public double getBalance()
+    {
+        return Balance;
+    }
 
 
     
