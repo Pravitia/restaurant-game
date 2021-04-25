@@ -1,7 +1,11 @@
 package restaurant;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
@@ -39,6 +43,13 @@ public class Main {
         frame.setVisible(true);
 
         //main menu testing end here
+
+        try {
+            BufferedImage titleBurger = ImageIO.read(new File("restaurant/images/Burger.JPG"));
+            System.out.println(titleBurger);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }
