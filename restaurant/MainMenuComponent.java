@@ -11,10 +11,10 @@ import java.io.IOException;
 
 public class MainMenuComponent extends JComponent {
 
-    private MainMenuShape menu;
+
     public MainMenuComponent()
     {
-        menu = new MainMenuShape();
+
     }
 
 
