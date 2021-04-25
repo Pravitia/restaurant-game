@@ -18,7 +18,8 @@ public class RestaurantScreen {
     private Customer createNewCustomer(){
 
         //returns customer
-        return new Customer();
+        //return new Customer();    //temporary comment out to test other shit
+        return null;
     }
 
 
