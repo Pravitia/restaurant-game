@@ -3,6 +3,8 @@ package restaurant;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
+import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -35,6 +37,21 @@ public class Main {
 
         JFrame frame = new JFrame("game");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        //buttons and stuff
+        JButton playButton = new JButton("Play");
+        playButton.setBounds(50,100,95,30);
+
+        //actionlistener needs to repaint jframe with new window instead of make new frame in future
+        playButton.addActionListener(new ActionListener() {
+                                         public void actionPerformed(ActionEvent e) {
+                                             JFrame click = new JFrame("click");
+                                             click.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                                             click.setSize(300, 300);
+                                             click.setVisible(true);
+                                         }
+                                     });
+        frame.add(playButton);
 
 
         //frame.setBackground(Color.BLUE /*new Color(118,181,197)*/);

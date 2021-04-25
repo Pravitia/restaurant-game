@@ -27,11 +27,13 @@ public class MainMenuComponent extends JComponent {
         //Title string set font
         g2.setFont(new Font("Dialog", Font.BOLD, 40));
 
-
         //image box
         Rectangle2D.Double imageBox = new Rectangle2D.Double(525,100,450, 450);
 
+
+
         //Rectangle2D.Double test = new Rectangle2D.Double(700,100,450, 500);
+
 
         //draw everything
         g2.draw(titleBox);
