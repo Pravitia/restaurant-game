@@ -38,9 +38,9 @@ public class Main {
         JFrame frame = new JFrame("game");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        //buttons and stuff
+        //buttons and stuff   //for some reason closing 1 frame closes them all
         JButton playButton = new JButton("Play");
-        playButton.setBounds(50,100,95,30);
+        playButton.setBounds(700,800,100,30);
 
         //actionlistener needs to repaint jframe with new window instead of make new frame in future
         playButton.addActionListener(new ActionListener() {
@@ -53,6 +53,17 @@ public class Main {
                                      });
         frame.add(playButton);
 
+        JButton leaderboardButton = new JButton("Leaderboard");
+        leaderboardButton.setBounds(100,800,200,30);
+        leaderboardButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                JFrame click = new JFrame("Leaderboard");
+                click.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                click.setSize(300, 300);
+                click.setVisible(true);
+            }
+        });
+        frame.add(leaderboardButton);
 
         //frame.setBackground(Color.BLUE /*new Color(118,181,197)*/);
         frame.add(new MainMenuComponent());
