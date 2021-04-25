@@ -1,5 +1,6 @@
 package restaurant;
 
+import javax.swing.*;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
@@ -24,7 +25,15 @@ public class Main {
 
 
         //main menu testing will start here
+        final int FRAME_WIDTH = 400;
+        final int FRAME_HEIGHT = 400;
 
+        JFrame frame = new JFrame();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        frame.add(new MainMenuComponent());
+        frame.setSize(FRAME_WIDTH, FRAME_HEIGHT);
+        frame.setVisible(true);
 
         //main menu testing end here
     }
