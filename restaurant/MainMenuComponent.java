@@ -25,14 +25,10 @@ public class MainMenuComponent extends JComponent {
         //Title box
         Rectangle2D.Double titleBox = new Rectangle2D.Double(500, 20, 500, 75);
         //Title string set font
-        g2.setFont(new Font("Dialog", Font.BOLD, 40));
+        g2.setFont(new Font("Dialog", Font.BOLD, 40));      //decide on what font we want as a group later
 
         //image box
         Rectangle2D.Double imageBox = new Rectangle2D.Double(525,100,450, 450);
-
-
-
-        //Rectangle2D.Double test = new Rectangle2D.Double(700,100,450, 500);
 
 
         //draw everything
@@ -46,10 +42,9 @@ public class MainMenuComponent extends JComponent {
         }
         g2.drawImage(titleBurger, 530, 100, 450, 450, null);
 
-
-        //g2.draw(test);
     }
 
+    //everything to do with images goes here
     private static BufferedImage titleBurger;
     private static void loadImage() throws IOException{
         titleBurger = ImageIO.read(new File("restaurant/images/transparentBurger.png"));

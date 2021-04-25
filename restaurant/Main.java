@@ -14,6 +14,8 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         ArrayList<Food> loot = new ArrayList<>();
+
+        //change images to transparent version
         loot.add(new Food(25, 5, "Steak", "images/steakPicture"));
         loot.add(new Food(18, 4, "Rotisserie Chicken", "chickenPicture"));
         loot.add(new Food(1.50, 3, "Hotdog", "hotdogPicture"));
@@ -65,19 +67,16 @@ public class Main {
         });
         frame.add(leaderboardButton);
 
-        //frame.setBackground(Color.BLUE /*new Color(118,181,197)*/);
+        //frame.setBackground(Color.BLUE /*new Color(118,181,197)*/);  //shit don't work
         frame.add(new MainMenuComponent());
         frame.setSize(FRAME_WIDTH, FRAME_HEIGHT);
         frame.setVisible(true);
 
-        //main menu testing end here
 
-        try {
-            BufferedImage titleBurger = ImageIO.read(new File("restaurant/images/Burger.JPG"));
-            System.out.println(titleBurger);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
+
+
+        //main menu testing end here
     }
 
 }
