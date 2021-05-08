@@ -12,9 +12,9 @@ public class Main {
 
         //change images to transparent version
         loot.add(new Food(25, 5, "Steak", "images/steakPicture"));
-        loot.add(new Food(18, 4, "Rotisserie Chicken", "chickenPicture"));
-        loot.add(new Food(1.50, 3, "Hotdog", "hotdogPicture"));
-        loot.add(new Food(15, 4, "Burger", "burgerPicture"));
+        loot.add(new Food(18, 4, "Rotisserie Chicken", "images/chickenPicture"));
+        loot.add(new Food(1.50, 3, "Hotdog", "images/hotdogPicture"));
+        loot.add(new Food(15, 4, "Burger", "images/burgerPicture"));
         loot.add(new Food(12, 4, "Pepperoni Pizza", "pizzaPicture"));
         loot.add(new Food(10, 3, "Turkey Sandwich", "sandwichPicture"));
         loot.add(new Food(3.5, 3, "Fries", "friesPicture"));

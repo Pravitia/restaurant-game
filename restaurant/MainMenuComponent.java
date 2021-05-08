@@ -28,7 +28,7 @@ public class MainMenuComponent extends JComponent {
 
         //draw everything
         g2.draw(titleBox);
-        g2.drawString("Restaurant game", 600 ,70);
+        g2.drawString("Restaurant Game", 580 ,70);
         g2.draw(imageBox);
         try {
             loadImage();

@@ -14,7 +14,7 @@ public class MainMenuFrame extends JFrame {
     {
         this.playButton = new JButton("Play");
         playButton.setBounds(700,800,100,30);
-        this.leaderboardButton = new JButton("leaderboard");
+        this.leaderboardButton = new JButton("Leaderboard");
         leaderboardButton.setBounds(100,800,200,30);
 
         this.add(playButton);
