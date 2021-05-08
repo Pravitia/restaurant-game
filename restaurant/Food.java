@@ -34,7 +34,5 @@ public class Food implements Consumables{
         return pictureLocation;
     }
 
-
-
-
+    
 }
