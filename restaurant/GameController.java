@@ -1,36 +1,62 @@
 package restaurant;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.concurrent.BlockingQueue;
 
 public class GameController {
     BlockingQueue<Message> queue;
     private GameView view;
     private GameModel model;
+    private ArrayList<Valve> valves = new ArrayList<Valve>();
 
     public GameController (BlockingQueue<Message> queue, GameModel model, GameView view)
     {
         this.queue = queue;
         this.model = model;
         this.view = view;
+
+        // Creates object of each kind of valve
+        valves.add(new StartGameValve());
     }
 
     public void mainLoop() {
-        while(view.isDisplayable())
+        ValveResponse response = ValveResponse.EXECUTED;
+        Message message = null;
+        while(response != ValveResponse.FINISH)
         {
-            Message message = null;
             try {
                 message = queue.take();
             }catch (InterruptedException e){
                 //do nothing
             }
 
+            // Looks for a valve that can process current message
+            for (Valve valve : valves) {
+                response = valve.execute(message);
+                if (response != ValveResponse.MISS) {
+                    break;
+                }
+            }
 
 
         }
     }
 
-    /*
+    private class StartGameValve implements Valve {
+        public ValveResponse execute(Message message) {
+            if (message.getClass() != StartGameMessage.class) {
+                return ValveResponse.MISS;
+            }
+            // This message is a StartGameMessage message
+
+            // Valve response to change view from MainMenuFrame to GameStartFrame
+            //GameView.updateToGameStart();
+            return ValveResponse.EXECUTED;
+        }
+    }
+
     private interface Valve {
-        public ValveResponse execute(Message message);
-    }*/
+        ValveResponse execute(Message message);
+    }
 }
