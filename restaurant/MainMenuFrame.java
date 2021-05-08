@@ -1,7 +1,6 @@
 package restaurant;
 
 import javax.swing.*;
-import java.util.concurrent.BlockingQueue;
 
 public class MainMenuFrame extends JFrame {
     final int FRAME_WIDTH = 1500;
