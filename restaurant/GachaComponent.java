@@ -39,11 +39,11 @@ public class GachaComponent extends JComponent{
 
     private static BufferedImage burger, taco, hotdog, sushi, soda;
     private static void loadImage() throws IOException{
-       burger = ImageIO.read(new File("restaurant/images/transparentBurger.png"));
-       taco = ImageIO.read(new File("restaurant/images/transparentTacos.png"));
-       hotdog = ImageIO.read(new File("restaurant/images/transparentHotdog.png"));
-       sushi = ImageIO.read(new File("restaurant/images/transparentSushi.png"));
-       soda = ImageIO.read(new File("restaurant/images/transparentSoda.png"));
+       burger = ImageIO.read(new File("restaurant/images/transparentBurgerNew.png"));
+       taco = ImageIO.read(new File("restaurant/images/transparentTacoNew.png"));
+       hotdog = ImageIO.read(new File("restaurant/images/transparentHotdogNew.png"));
+       sushi = ImageIO.read(new File("restaurant/images/transparentSushiNew.png"));
+       soda = ImageIO.read(new File("restaurant/images/transparentSodaNew.png"));
     }
 
 

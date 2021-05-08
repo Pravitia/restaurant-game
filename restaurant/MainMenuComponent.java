@@ -42,7 +42,7 @@ public class MainMenuComponent extends JComponent {
     //everything to do with images goes here
     private static BufferedImage titleBurger;
     private static void loadImage() throws IOException{
-        titleBurger = ImageIO.read(new File("restaurant/images/transparentBurger.png"));
+        titleBurger = ImageIO.read(new File("restaurant/images/transparentBurgerNew.png"));
     }
 
 
