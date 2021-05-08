@@ -20,7 +20,7 @@ public class MainMenuComponent extends JComponent {
         //Title box
         Rectangle2D.Double titleBox = new Rectangle2D.Double(500, 20, 500, 75);
         //Title string set font
-        g2.setFont(new Font("Dialog", Font.BOLD, 40));      //decide on what font we want as a group later
+        g2.setFont(new Font("Arial", Font.BOLD, 40));      //decide on what font we want as a group later
 
         //image box
         Rectangle2D.Double imageBox = new Rectangle2D.Double(525,100,450, 450);
