@@ -19,6 +19,7 @@ public class GameController {
         // Creates object of each kind of valve
         valves.add(new StartGameValve());
         valves.add(new PlayGameValve());
+        valves.add(new StartGachaValve());
     }
 
     public void mainLoop() {
@@ -58,6 +59,8 @@ public class GameController {
         }
     }
 
+    // Valves used in GameStartFrame. For "Start Game" button and "Gacha" button
+
     private class PlayGameValve implements Valve {
         public ValveResponse execute(Message message) {
             if (message.getClass() != PlayGameMessage.class) {
@@ -70,6 +73,24 @@ public class GameController {
             //GameView.updateToRestaurantFrame();
             return ValveResponse.EXECUTED;
         }
+    }
+
+    private class StartGachaValve implements Valve {
+        public ValveResponse execute(Message message) {
+            if (message.getClass() != PlayGameMessage.class) {
+                return ValveResponse.MISS;
+            }
+
+            // Valve response to change view from GameStartFrame to GachaFrame
+            // updateToGachaFrame is a view function that switches frames (Needs to be implemented)
+
+            //GameView.updateToGachaFrame();
+            return ValveResponse.EXECUTED;
+        }
+    }
+
+    private class RollSingleValve implements Valve {
+
     }
 
 
