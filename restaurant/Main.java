@@ -3,6 +3,8 @@ package restaurant;
 import javax.swing.*;
 import java.awt.event.*;
 import java.util.ArrayList;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
 
 public class Main {
     public static void main(String[] args) {
@@ -25,7 +27,17 @@ public class Main {
         loot.add(new Food(7, 3, "Milkshake", "milkshakePicture"));
 
 
+        //MVC testing
+        BlockingQueue<Message> queue = new LinkedBlockingQueue<>();
+        GameModel model = new GameModel();
+        GameView view = new GameView(queue);
+        GameController controller = new GameController(queue, model, view);
 
+        controller.mainLoop();
+
+
+
+        /*
         //main menu testing will start here
         final int FRAME_WIDTH = 1500;
         final int FRAME_HEIGHT = 1000;
@@ -60,12 +72,13 @@ public class Main {
         });
         frame.add(leaderboardButton);
 
-        //frame.setBackground(Color.BLUE /*new Color(118,181,197)*/);  //shit don't work
-        frame.add(new GameView());
+        //frame.setBackground(Color.BLUE);  //shit don't work
+        BlockingQueue tempq = null;
+        frame.add(new GameView(tempq));
         frame.setSize(FRAME_WIDTH, FRAME_HEIGHT);
         frame.setVisible(true);
 
-
+        */
 
 
 
