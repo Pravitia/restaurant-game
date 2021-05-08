@@ -9,10 +9,11 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-public class MainMenuComponent extends JComponent {
+//View class
+public class GameView extends JComponent {
 
 
-    public MainMenuComponent()
+    public GameView()
     {
 
     }

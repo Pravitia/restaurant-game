@@ -1,14 +1,7 @@
 package restaurant;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.*;
-import java.awt.geom.Rectangle2D;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Main {
@@ -68,7 +61,7 @@ public class Main {
         frame.add(leaderboardButton);
 
         //frame.setBackground(Color.BLUE /*new Color(118,181,197)*/);  //shit don't work
-        frame.add(new MainMenuComponent());
+        frame.add(new GameView());
         frame.setSize(FRAME_WIDTH, FRAME_HEIGHT);
         frame.setVisible(true);
 
