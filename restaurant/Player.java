@@ -11,7 +11,7 @@ public class Player {
     public Player()
     {
         //this.Name = name;
-        this.Inventory = new ArrayList<>();
+        this.Inventory = new ArrayList<Food>();
         this.Balance = 0;
         this.moneyMade = 0;
     }
