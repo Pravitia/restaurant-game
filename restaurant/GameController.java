@@ -104,7 +104,9 @@ public class GameController {
 
             // Valve response to roll for a single food
 
-            //GameModel.rollOnce();
+            SingleRollMessage msg = (SingleRollMessage) message;
+
+            model.user.addFood(msg.getFoodRolled());
             return ValveResponse.EXECUTED;
         }
     }

@@ -3,11 +3,12 @@ package restaurant;
 //Model class
 public class GameModel {
 
-    private Player user;
+    protected Player user;
 
     public GameModel() {
         this.user = new Player();
     }
+
 
 
 

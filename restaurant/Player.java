@@ -15,7 +15,7 @@ public class Player {
         this.Balance = 0;
         this.moneyMade = 0;
     }
-    private void addFood(Food f){
+    public void addFood(Food f){
         Inventory.add(f);
 
     }
