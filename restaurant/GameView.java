@@ -17,6 +17,7 @@ public class GameView extends JFrame {
 //    MainMenuFrame mainMenuScreen = new MainMenuFrame(queue);
 //    GameStartFrame gameStartScreen = new GameStartFrame();
 //    GachaFrame gachaScreen = new GachaFrame();
+    MinigameFrame minigameScreen = new MinigameFrame();
 
     BlockingQueue<Message> queue;
 
@@ -28,6 +29,7 @@ public class GameView extends JFrame {
 //        this.add(mainMenuScreen);
 //        this.add(gameStartScreen);
 //        this.add(gachaScreen);
+        this.add(minigameScreen);
 
         this.setSize(FRAME_WIDTH, FRAME_HEIGHT);
         this.setVisible(true);
