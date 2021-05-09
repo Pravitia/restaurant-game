@@ -28,9 +28,9 @@ public class MinigameFrame extends JFrame{
     public MinigameFrame(BlockingQueue<Message> queue)
     {
         this.queue = queue;
-        playerFood.add(new Food(15, 4, "Burger", "restaurant/images/transparentBurgerNew.png"));
-        playerFood.add(new Food(12, 4, "Pepperoni Pizza", "restaurant/images/transparentPepperoniPizzaNew.png"));
-        playerFood.add(new Food(10, 3, "Turkey Sandwich", "restaurant/images/transparentTurkeySandwichNew.png"));
+        //playerFood.add(new Food(15, 4, "Burger", "restaurant/images/transparentBurgerNew.png"));
+        //playerFood.add(new Food(12, 4, "Pepperoni Pizza", "restaurant/images/transparentPepperoniPizzaNew.png"));
+        //playerFood.add(new Food(10, 3, "Turkey Sandwich", "restaurant/images/transparentTurkeySandwichNew.png"));
         //Food icons
         /*
         burgerIcon = new ImageIcon(new ImageIcon("restaurant/images/transparentBurgerNew.png").getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT));
@@ -111,8 +111,9 @@ public class MinigameFrame extends JFrame{
         this.add(sushiButton);
         this.add(tacoButton);
         this.add(sandwichButton);
-        this.add(minigame);
         */
+        this.add(minigame);
+        
 
 
         this.setSize(FRAME_WIDTH, FRAME_HEIGHT);

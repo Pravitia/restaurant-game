@@ -11,20 +11,20 @@ public class Food implements Consumables{
     public ArrayList<Food> loot = new ArrayList<>();
 
     public Food() {
-        loot.add(new Food(25, 5, "Steak", "images/steakPicture"));
-        loot.add(new Food(18, 4, "Rotisserie Chicken", "images/chickenPicture"));
-        loot.add(new Food(1.50, 3, "Hotdog", "images/hotdogPicture"));
+        loot.add(new Food(25, 5, "Steak", "restaurant/images/transparentSteakNew.png"));
+        loot.add(new Food(18, 4, "Rotisserie Chicken", "restaurant/images/transparentRotisserieChickenNew.png"));
+        loot.add(new Food(1.50, 3, "Hotdog", "restaurant/images/transparentHotdogNew.png"));
         loot.add(new Food(15, 4, "Burger", "restaurant/images/transparentBurgerNew.png"));
-        loot.add(new Food(12, 4, "Pepperoni Pizza", "pizzaPicture"));
-        loot.add(new Food(10, 3, "Turkey Sandwich", "sandwichPicture"));
-        loot.add(new Food(3.5, 3, "Fries", "friesPicture"));
-        loot.add(new Food(14, 4, "Ramen", "ramenPicture"));
-        loot.add(new Food(16, 4, "Sushi", "sushiPicture"));
-        loot.add(new Food(35, 5, "Strawberry Cake", "cakePicture"));
-        loot.add(new Food(1, 3, "Cup Noodle", "noodlePicture"));
-        loot.add(new Food(13, 4, "Tacos", "tacoPicture"));
-        loot.add(new Food(2, 3, "Soda", "sodaPicture"));
-        loot.add(new Food(7, 3, "Milkshake", "milkshakePicture"));
+        loot.add(new Food(12, 4, "Pepperoni Pizza", "restaurant/images/transparentPepperoniPizzaNew.png"));
+        loot.add(new Food(10, 3, "Turkey Sandwich", "restaurant/images/transparentTurkeySandwichNew.png"));
+        loot.add(new Food(3.5, 3, "Fries", "restaurant/images/transparentFriesNew.png"));
+        loot.add(new Food(14, 4, "Ramen", "restaurant/images/transparentRamenNew.png"));
+        loot.add(new Food(16, 4, "Sushi", "restaurant/images/transparentSushiNew.png"));
+        loot.add(new Food(35, 5, "Strawberry Cake", "restaurant/images/transparentStrawberryCakeNew.png"));
+        loot.add(new Food(1, 3, "Cup Noodle", "restaurant/images/transparentCupNoodleNew.png"));
+        loot.add(new Food(13, 4, "Tacos", "restaurant/images/transparentTacoNew.png"));
+        loot.add(new Food(2, 3, "Soda", "restaurant/images/transparentSodaNew.png"));
+        loot.add(new Food(7, 3, "Milkshake", "restaurant/images/transparentMilkshakeNew.png"));
     }
 
     public Food(double price, int rarity, String name, String pictureLocation)
