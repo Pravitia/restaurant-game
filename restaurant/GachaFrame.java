@@ -12,7 +12,7 @@ public class GachaFrame extends JFrame{
 
     GachaComponent gacha = new GachaComponent();
 
-    JButton backButton, oneRollButton, tenRollButton;
+    JButton backButton, oneRollButton;
 
     public GachaFrame(BlockingQueue<Message> queue)
     {
@@ -21,11 +21,13 @@ public class GachaFrame extends JFrame{
         this.backButton = new JButton("Back");
         backButton.setBounds(10, 900, 90, 40);
         this.oneRollButton = new JButton("1 Roll");
-        oneRollButton.setBounds(400,700, 200, 70);
+        oneRollButton.setBounds(650,700, 200, 70);
         oneRollButton.setFont(font);
+        /*
         this.tenRollButton = new JButton("10 Roll");
         tenRollButton.setBounds(900, 700, 200, 70);
         tenRollButton.setFont(font);
+        */
 
         oneRollButton.addActionListener(e -> {
             try {
@@ -47,7 +49,7 @@ public class GachaFrame extends JFrame{
 
         this.add(backButton);
         this.add(oneRollButton);
-        this.add(tenRollButton);
+        //this.add(tenRollButton);
         this.add(gacha);
         this.setSize(FRAME_WIDTH, FRAME_HEIGHT);
         //this.setVisible(false);
