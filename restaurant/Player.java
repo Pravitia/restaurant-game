@@ -14,6 +14,7 @@ public class Player {
         this.Inventory = new ArrayList<Food>();
         this.Balance = 0;
         this.moneyMade = 0;
+        Inventory.add(new Food(7, 3, "Milkshake", "milkshakePicture"));
     }
     public void addFood(Food f){
         Inventory.add(f);

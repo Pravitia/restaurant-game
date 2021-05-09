@@ -11,6 +11,8 @@ import java.awt.Image.*;
 public class MinigameFrame extends JFrame{
     BlockingQueue<Message> queue;
     private ArrayList<Food> playerFood;
+    private ArrayList<ImageIcon> iconList;
+    private ArrayList<JButton> buttonList;
 
     final int FRAME_WIDTH = 1500;
     final int FRAME_HEIGHT = 1000;
@@ -28,6 +30,7 @@ public class MinigameFrame extends JFrame{
         this.queue = queue;
 
         //Food icons
+        /*
         burgerIcon = new ImageIcon(new ImageIcon("restaurant/images/transparentBurgerNew.png").getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT));
         cupNoodleIcon = new ImageIcon(new ImageIcon("restaurant/images/transparentCupNoodleNew.png").getImage().getScaledInstance(70, 100, Image.SCALE_DEFAULT));
         friesIcon = new ImageIcon(new ImageIcon("restaurant/images/transparentFriesNew.png").getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT));
@@ -42,12 +45,25 @@ public class MinigameFrame extends JFrame{
         sushiIcon = new ImageIcon(new ImageIcon("restaurant/images/transparentSushiNew.png").getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT));
         tacoIcon = new ImageIcon(new ImageIcon("restaurant/images/transparentTacoNew.png").getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT));
         sandwichIcon = new ImageIcon(new ImageIcon("restaurant/images/transparentTurkeySandwichNew.png").getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT));
-
+        */
+        
+        for(int i = 0; i < playerFood.size(); i++){
+           iconList.add(new ImageIcon(new ImageIcon(playerFood.get(i).getPictureLocation()).getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT)));
+        }
 
 
 
 
         //Food buttons
+        int xBounds = 0;
+        for(int j = 0; j < iconList.size(); j++){
+            buttonList.add(new JButton(iconList.get(j)));
+            buttonList.get(j).setBounds(xBounds,850,100,100);
+            this.add(buttonList.get(j));
+            xBounds += 100;
+        }
+        /*
+
         burgerButton = new JButton(burgerIcon);
         burgerButton.setBounds(0, 850, 100, 100);
         cupNoodleButton = new JButton(cupNoodleIcon);
@@ -94,6 +110,7 @@ public class MinigameFrame extends JFrame{
         this.add(tacoButton);
         this.add(sandwichButton);
         this.add(minigame);
+        */
 
 
         this.setSize(FRAME_WIDTH, FRAME_HEIGHT);
@@ -104,6 +121,8 @@ public class MinigameFrame extends JFrame{
     public void updatePlayerFood(ArrayList<Food> f){
         playerFood = f;
     }
+
+
 
 
 }
