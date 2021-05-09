@@ -8,23 +8,14 @@ import java.util.concurrent.LinkedBlockingQueue;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList<Food> loot = new ArrayList<>();
+        Food food = new Food();
+        ArrayList<Food> loot = food.getLoot();
 
-        //change images to transparent version
-        loot.add(new Food(25, 5, "Steak", "images/steakPicture"));
-        loot.add(new Food(18, 4, "Rotisserie Chicken", "images/chickenPicture"));
-        loot.add(new Food(1.50, 3, "Hotdog", "images/hotdogPicture"));
-        loot.add(new Food(15, 4, "Burger", "images/burgerPicture"));
-        loot.add(new Food(12, 4, "Pepperoni Pizza", "pizzaPicture"));
-        loot.add(new Food(10, 3, "Turkey Sandwich", "sandwichPicture"));
-        loot.add(new Food(3.5, 3, "Fries", "friesPicture"));
-        loot.add(new Food(14, 4, "Ramen", "ramenPicture"));
-        loot.add(new Food(16, 4, "Sushi", "sushiPicture"));
-        loot.add(new Food(35, 5, "Strawberry Cake", "cakePicture"));
-        loot.add(new Food(1, 3, "Cup Noodle", "noodlePicture"));
-        loot.add(new Food(13, 4, "Tacos", "tacoPicture"));
-        loot.add(new Food(2, 3, "Soda", "sodaPicture"));
-        loot.add(new Food(7, 3, "Milkshake", "milkshakePicture"));
+        /*
+        //test loot list
+        for(int i = 0; i < loot.size(); i++) {
+            System.out.print(loot.get(i).getName());
+        }*/
 
 
         //MVC testing
