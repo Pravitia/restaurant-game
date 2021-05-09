@@ -30,8 +30,11 @@ public class Main {
         //MVC testing
         BlockingQueue<Message> queue = new LinkedBlockingQueue<>();
         GameModel model = new GameModel();
-        GameView view = new GameView(queue);
-        GameController controller = new GameController(queue, model, view);
+        //GameView view = new GameView(queue);
+        MainMenuFrame view1 = new MainMenuFrame(queue);
+        GameStartFrame view2 = new GameStartFrame(queue);
+        GachaFrame view3 = new GachaFrame(queue);
+        GameController controller = new GameController(queue, model, view1, view2, view3);
 
         controller.mainLoop();
 

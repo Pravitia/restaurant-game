@@ -14,9 +14,9 @@ import java.io.IOException;
 public class GameView extends JFrame {
     final int FRAME_WIDTH = 1500;
     final int FRAME_HEIGHT = 1000;
-    MainMenuFrame mainMenuScreen = new MainMenuFrame();
-    GameStartFrame gameStartScreen = new GameStartFrame();
-    GachaFrame gachaScreen = new GachaFrame();
+//    MainMenuFrame mainMenuScreen = new MainMenuFrame(queue);
+//    GameStartFrame gameStartScreen = new GameStartFrame();
+//    GachaFrame gachaScreen = new GachaFrame();
 
     BlockingQueue<Message> queue;
 
@@ -25,9 +25,9 @@ public class GameView extends JFrame {
     {
         this.queue = queue;
 
-        this.add(mainMenuScreen);
-        this.add(gameStartScreen);
-        this.add(gachaScreen);
+//        this.add(mainMenuScreen);
+//        this.add(gameStartScreen);
+//        this.add(gachaScreen);
 
         this.setSize(FRAME_WIDTH, FRAME_HEIGHT);
         this.setVisible(true);

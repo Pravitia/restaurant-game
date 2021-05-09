@@ -6,15 +6,20 @@ import java.util.concurrent.BlockingQueue;
 
 public class GameController {
     BlockingQueue<Message> queue;
-    private GameView view;
+    //private GameView view;
+    private MainMenuFrame view1;
+    private GameStartFrame view2;
+    private GachaFrame view3;
     private GameModel model;
-    private ArrayList<Valve> valves = new ArrayList<Valve>();
+    private ArrayList<Valve> valves = new ArrayList<>();
 
-    public GameController (BlockingQueue<Message> queue, GameModel model, GameView view)
+    public GameController (BlockingQueue<Message> queue, GameModel model, MainMenuFrame view1, GameStartFrame view2, GachaFrame view3)
     {
         this.queue = queue;
         this.model = model;
-        this.view = view;
+        this.view1 = view1;
+        this.view2 = view2;
+        this.view3 = view3;
 
         // Creates object of each kind of valve
         valves.add(new StartGameValve());
@@ -42,8 +47,6 @@ public class GameController {
                     break;
                 }
             }
-
-
         }
     }
 
@@ -58,7 +61,7 @@ public class GameController {
             // Valve response to change view from MainMenuFrame to GameStartFrame
             // updateToGameStart is a view function that switches frames (Needs to be implemented)
 
-            //GameView.updateToGameStart();
+            view1.updateToGameStart(view2);
             return ValveResponse.EXECUTED;
         }
     }
@@ -77,7 +80,7 @@ public class GameController {
             // Valve response to change view from GameStartFrame to RestaurantFrame
             // updateToRestaurantFrame is a view function that switches frames (Needs to be implemented)
 
-            //GameView.updateToRestaurantFrame();
+            //GameStartFrame.updateToRestaurantFrame();
             return ValveResponse.EXECUTED;
         }
     }
@@ -91,7 +94,7 @@ public class GameController {
             // Valve response to change view from GameStartFrame to GachaFrame
             // updateToGachaFrame is a view function that switches frames (Needs to be implemented)
 
-            //GameView.updateToGachaFrame();
+            view2.updateToGachaFrame(view3);
             return ValveResponse.EXECUTED;
         }
     }
@@ -119,7 +122,7 @@ public class GameController {
 
             // Valve response to go back to GameStartFrame from GachaFrame
 
-            //GameView.updateToGameStart();
+            view3.updateToGameStart(view2);
             return ValveResponse.EXECUTED;
         }
     }
