@@ -28,7 +28,9 @@ public class MinigameFrame extends JFrame{
     public MinigameFrame(BlockingQueue<Message> queue)
     {
         this.queue = queue;
-
+        //playerFood.add(new Food(15, 4, "Burger", "restaurant/images/transparentBurgerNew.png"));
+        //playerFood.add(new Food(12, 4, "Pepperoni Pizza", "restaurant/images/transparentPepperoniPizzaNew.png"));
+        //playerFood.add(new Food(10, 3, "Turkey Sandwich", "restaurant/images/transparentTurkeySandwichNew.png"));
         //Food icons
         /*
         burgerIcon = new ImageIcon(new ImageIcon("restaurant/images/transparentBurgerNew.png").getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT));
@@ -62,55 +64,56 @@ public class MinigameFrame extends JFrame{
             this.add(buttonList.get(j));
             xBounds += 100;
         }
+        /*
+
+        burgerButton = new JButton(burgerIcon);
+        burgerButton.setBounds(0, 850, 100, 100);
+        cupNoodleButton = new JButton(cupNoodleIcon);
+        cupNoodleButton.setBounds(100, 850, 100, 100);
+        friesButton = new JButton(friesIcon);
+        friesButton.setBounds(200, 850, 100, 100);
+        hotdogButton = new JButton(hotdogIcon);
+        hotdogButton.setBounds(300, 850, 100, 100);
+        milkshakeButton = new JButton(milkshakeIcon);
+        milkshakeButton.setBounds(400, 850, 100, 100);
+        pizzaButton = new JButton(pizzaIcon);
+        pizzaButton.setBounds(500, 850 ,100, 100);
+        ramenButton = new JButton(ramenIcon);
+        ramenButton.setBounds(600, 850, 100, 100);
+        chickenButton = new JButton(chickenIcon);
+        chickenButton.setBounds(700, 850, 100, 100);
+        sodaButton = new JButton(sodaIcon);
+        sodaButton.setBounds(800, 850, 100 ,100);
+        steakButton = new JButton(steakIcon);
+        steakButton.setBounds(900, 850, 100, 100);
+        cakeButton = new JButton(cakeIcon);
+        cakeButton.setBounds(1000, 850, 100, 100);
+        sushiButton = new JButton(sushiIcon);
+        sushiButton.setBounds(1100, 850, 100, 100);
+        tacoButton = new JButton(tacoIcon);
+        tacoButton.setBounds(1200, 850, 100, 100);
+        sandwichButton = new JButton(sandwichIcon);
+        sandwichButton.setBounds(1300, 850, 100, 100);
 
 
-//        burgerButton = new JButton(burgerIcon);
-//        burgerButton.setBounds(0, 850, 100, 100);
-//        cupNoodleButton = new JButton(cupNoodleIcon);
-//        cupNoodleButton.setBounds(100, 850, 100, 100);
-//        friesButton = new JButton(friesIcon);
-//        friesButton.setBounds(200, 850, 100, 100);
-//        hotdogButton = new JButton(hotdogIcon);
-//        hotdogButton.setBounds(300, 850, 100, 100);
-//        milkshakeButton = new JButton(milkshakeIcon);
-//        milkshakeButton.setBounds(400, 850, 100, 100);
-//        pizzaButton = new JButton(pizzaIcon);
-//        pizzaButton.setBounds(500, 850 ,100, 100);
-//        ramenButton = new JButton(ramenIcon);
-//        ramenButton.setBounds(600, 850, 100, 100);
-//        chickenButton = new JButton(chickenIcon);
-//        chickenButton.setBounds(700, 850, 100, 100);
-//        sodaButton = new JButton(sodaIcon);
-//        sodaButton.setBounds(800, 850, 100 ,100);
-//        steakButton = new JButton(steakIcon);
-//        steakButton.setBounds(900, 850, 100, 100);
-//        cakeButton = new JButton(cakeIcon);
-//        cakeButton.setBounds(1000, 850, 100, 100);
-//        sushiButton = new JButton(sushiIcon);
-//        sushiButton.setBounds(1100, 850, 100, 100);
-//        tacoButton = new JButton(tacoIcon);
-//        tacoButton.setBounds(1200, 850, 100, 100);
-//        sandwichButton = new JButton(sandwichIcon);
-//        sandwichButton.setBounds(1300, 850, 100, 100);
 
-
-
-//        this.add(burgerButton);
-//        this.add(cupNoodleButton);
-//        this.add(friesButton);
-//        this.add(hotdogButton);
-//        this.add(milkshakeButton);
-//        this.add(pizzaButton);
-//        this.add(ramenButton);
-//        this.add(chickenButton);
-//        this.add(sodaButton);
-//        this.add(steakButton);
-//        this.add(cakeButton);
-//        this.add(sushiButton);
-//        this.add(tacoButton);
-//        this.add(sandwichButton);
+        this.add(burgerButton);
+        this.add(cupNoodleButton);
+        this.add(friesButton);
+        this.add(hotdogButton);
+        this.add(milkshakeButton);
+        this.add(pizzaButton);
+        this.add(ramenButton);
+        this.add(chickenButton);
+        this.add(sodaButton);
+        this.add(steakButton);
+        this.add(cakeButton);
+        this.add(sushiButton);
+        this.add(tacoButton);
+        this.add(sandwichButton);
+        */
         this.add(minigame);
-
+        
 
 
         this.setSize(FRAME_WIDTH, FRAME_HEIGHT);
