@@ -8,7 +8,7 @@ public class Food implements Consumables{
     private int Rarity;
     private String Name;
     private String pictureLocation;
-    public ArrayList<Food> loot = new ArrayList<Food>();
+    public ArrayList<Food> loot = new ArrayList<>();
 
     public Food() {
         loot.add(new Food(25, 5, "Steak", "images/steakPicture"));

@@ -38,8 +38,8 @@ public class MainMenuFrame extends JFrame {
 
     }
 
-    public void updateToGameStart(JFrame view2) {
-        view2.setVisible(true);
+    public void updateToGameStart(JFrame view) {
+        view.setVisible(true);
         this.setVisible(false);
     }
 
