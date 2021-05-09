@@ -63,13 +63,20 @@ public class GameView extends JFrame {
     // Changes view from GameStartFrame to GachaFrame
     public void updateToGachaFrame() {
         gachaScreen.setVisible(true);
-        gameStartScreen.dispose();
+        gameStartScreen.setVisible(false);
     }
 
     // Changes view from GameStartFrame to RestaurantFrame
     public void updateToRestaurantFrame() {
         restaurantScreen.setVisible(true);
-        gameStartScreen.dispose();
+        gameStartScreen.setVisible(false);
+        final int Delay = 60000;
+        Timer t = new Timer(Delay, e -> {
+            restaurantScreen.setVisible(false);
+            gameStartScreen.setVisible(true);
+        });
+        t.setRepeats(false);
+        t.start();
     }
 
     // Methods for GachaFrame
@@ -77,7 +84,7 @@ public class GameView extends JFrame {
     // Changes view from GachaFrame to GameStartFrame
     public void returnToGameStart() {
         gameStartScreen.setVisible(true);
-        gachaScreen.dispose();
+        gachaScreen.setVisible(false);
     }
 
 

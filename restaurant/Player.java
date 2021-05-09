@@ -20,7 +20,6 @@ public class Player {
 
     }
 
-
     public ArrayList<Food> getFood(){
 
         return Inventory;
