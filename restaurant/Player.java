@@ -4,13 +4,13 @@ import java.util.ArrayList;
 
 public class Player {
 
-    private String Name;
+    //private String Name;
     private ArrayList<Food> Inventory;
     private double Balance;
     private double moneyMade;
-    public Player(String name)
+    public Player()
     {
-        this.Name = name;
+        //this.Name = name;
         this.Inventory = new ArrayList<>();
         this.Balance = 0;
         this.moneyMade = 0;
