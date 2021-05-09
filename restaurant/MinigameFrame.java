@@ -10,9 +10,9 @@ import java.awt.Image.*;
 
 public class MinigameFrame extends JFrame{
     BlockingQueue<Message> queue;
-    private ArrayList<Food> playerFood;
-    private ArrayList<ImageIcon> iconList;
-    private ArrayList<JButton> buttonList;
+    private ArrayList<Food> playerFood = new ArrayList<Food>();
+    private ArrayList<ImageIcon> iconList = new ArrayList<ImageIcon>();
+    private ArrayList<JButton> buttonList = new ArrayList<JButton>();
 
     final int FRAME_WIDTH = 1500;
     final int FRAME_HEIGHT = 1000;
@@ -28,7 +28,9 @@ public class MinigameFrame extends JFrame{
     public MinigameFrame(BlockingQueue<Message> queue)
     {
         this.queue = queue;
-
+        playerFood.add(new Food(15, 4, "Burger", "restaurant/images/transparentBurgerNew.png"));
+        playerFood.add(new Food(12, 4, "Pepperoni Pizza", "restaurant/images/transparentPepperoniPizzaNew.png"));
+        playerFood.add(new Food(10, 3, "Turkey Sandwich", "restaurant/images/transparentTurkeySandwichNew.png"));
         //Food icons
         /*
         burgerIcon = new ImageIcon(new ImageIcon("restaurant/images/transparentBurgerNew.png").getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT));
@@ -46,7 +48,7 @@ public class MinigameFrame extends JFrame{
         tacoIcon = new ImageIcon(new ImageIcon("restaurant/images/transparentTacoNew.png").getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT));
         sandwichIcon = new ImageIcon(new ImageIcon("restaurant/images/transparentTurkeySandwichNew.png").getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT));
         */
-        
+
         for(int i = 0; i < playerFood.size(); i++){
            iconList.add(new ImageIcon(new ImageIcon(playerFood.get(i).getPictureLocation()).getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT)));
         }
