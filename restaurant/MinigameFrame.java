@@ -3,12 +3,14 @@ package restaurant;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.Rectangle2D;
+import java.util.ArrayList;
 import java.util.concurrent.BlockingQueue;
 import java.awt.Image.*;
 
 
 public class MinigameFrame extends JFrame{
     BlockingQueue<Message> queue;
+    private ArrayList<Food> playerFood;
 
     final int FRAME_WIDTH = 1500;
     final int FRAME_HEIGHT = 1000;
@@ -97,6 +99,10 @@ public class MinigameFrame extends JFrame{
         this.setSize(FRAME_WIDTH, FRAME_HEIGHT);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+    }
+
+    public void setPlayerFood(ArrayList<Food> f){
+        playerFood = f;
     }
 
 
