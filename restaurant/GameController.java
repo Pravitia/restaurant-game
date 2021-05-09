@@ -122,8 +122,6 @@ public class GameController {
         }
     }
 
-
-
     private interface Valve {
         ValveResponse execute(Message message);
     }
