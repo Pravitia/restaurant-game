@@ -43,6 +43,8 @@ public class MinigameFrame extends JFrame{
 
 
 
+
+
         //Food buttons
         burgerButton = new JButton(burgerIcon);
         burgerButton.setBounds(0, 850, 100, 100);
@@ -86,6 +88,7 @@ public class MinigameFrame extends JFrame{
         this.add(sodaButton);
         this.add(steakButton);
         this.add(cakeButton);
+        this.add(sushiButton);
         this.add(tacoButton);
         this.add(sandwichButton);
         this.add(minigame);
