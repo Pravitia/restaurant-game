@@ -21,6 +21,7 @@ public class GameController {
         valves.add(new PlayGameValve());
         valves.add(new StartGachaValve());
         valves.add(new SingleRollValve());
+        valves.add(new BackToManageValve());
     }
 
     public void mainLoop() {
@@ -95,6 +96,8 @@ public class GameController {
         }
     }
 
+    // Valves used in GachaFrame. For "Roll 1", "Roll 10" (may implement later), and "Back" buttons
+
     private class SingleRollValve implements Valve {
         public ValveResponse execute(Message message) {
             if (message.getClass() != SingleRollMessage.class) {
@@ -108,7 +111,18 @@ public class GameController {
         }
     }
 
+    private class BackToManageValve implements Valve {
+        public ValveResponse execute(Message message) {
+            if (message.getClass() != BackToManageMessage.class) {
+                return ValveResponse.MISS;
+            }
 
+            // Valve response to go back to GameStartFrame from GachaFrame
+
+            //GameView.updateToGameStart();
+            return ValveResponse.EXECUTED;
+        }
+    }
 
 
 
