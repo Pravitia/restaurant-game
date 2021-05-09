@@ -106,6 +106,4 @@ public class MinigameFrame extends JFrame{
     }
 
 
-
-
 }
