@@ -19,6 +19,15 @@ public class GameStartFrame extends JFrame{
         this.gachaButton = new JButton("Gacha");
         gachaButton.setBounds(650,750,200,100);
 
+        startGameButton.addActionListener(e -> {
+            try {
+                Message msg = new PlayGameMessage();
+                queue.put(msg);
+            } catch (InterruptedException error) {
+                // do nothing
+            }
+        });
+
         gachaButton.addActionListener(e -> {
             try {
                 Message msg = new StartGachaMessage();
@@ -32,7 +41,6 @@ public class GameStartFrame extends JFrame{
         this.add(gachaButton);
         this.add(gameStart);
         this.setSize(FRAME_WIDTH, FRAME_HEIGHT);
-        //this.setVisible(false);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 

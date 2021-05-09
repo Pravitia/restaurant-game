@@ -7,9 +7,6 @@ import java.util.concurrent.BlockingQueue;
 public class GameController {
     BlockingQueue<Message> queue;
     private GameView view;
-//    private MainMenuFrame view1;
-//    private GameStartFrame view2;
-//    private GachaFrame view3;
     private GameModel model;
     private ArrayList<Valve> valves = new ArrayList<>();
 
@@ -18,9 +15,6 @@ public class GameController {
         this.queue = queue;
         this.model = model;
         this.view = view;
-//        this.view1 = new MainMenuFrame();
-//        this.view2 = view2;
-//        this.view3 = view3;
 
         // Creates object of each kind of valve
         valves.add(new StartGameValve());
@@ -81,7 +75,7 @@ public class GameController {
             // Valve response to change view from GameStartFrame to RestaurantFrame
             // updateToRestaurantFrame is a view function that switches frames (Needs to be implemented)
 
-            //view.updateToRestaurantFrame();
+            view.updateToRestaurantFrame();
             return ValveResponse.EXECUTED;
         }
     }

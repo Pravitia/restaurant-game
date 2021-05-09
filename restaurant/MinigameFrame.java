@@ -21,7 +21,7 @@ public class MinigameFrame extends JFrame{
                 pizzaButton, ramenButton, chickenButton, sodaButton, steakButton, cakeButton,
                 sushiButton, tacoButton, sandwichButton;
 
-    public MinigameFrame()
+    public MinigameFrame(BlockingQueue<Message> queue)
     {
         this.queue = queue;
 
@@ -92,7 +92,6 @@ public class MinigameFrame extends JFrame{
 
 
         this.setSize(FRAME_WIDTH, FRAME_HEIGHT);
-        this.setVisible(true);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
     }
