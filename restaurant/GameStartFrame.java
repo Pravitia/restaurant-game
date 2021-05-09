@@ -36,9 +36,4 @@ public class GameStartFrame extends JFrame{
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
-    public void updateToGachaFrame(JFrame gachaMenu) {
-        gachaMenu.setVisible(true);
-        this.setVisible(false);
-    }
-
 }

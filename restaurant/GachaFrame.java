@@ -27,6 +27,15 @@ public class GachaFrame extends JFrame{
         tenRollButton.setBounds(900, 700, 200, 70);
         tenRollButton.setFont(font);
 
+        oneRollButton.addActionListener(e -> {
+            try {
+                Message msg = new SingleRollMessage();
+                queue.put(msg);
+            } catch (InterruptedException error) {
+                // do nothing
+            }
+        });
+
         backButton.addActionListener(e -> {
             try {
                 Message msg = new BackToManageMessage();
@@ -43,11 +52,6 @@ public class GachaFrame extends JFrame{
         this.setSize(FRAME_WIDTH, FRAME_HEIGHT);
         //this.setVisible(false);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    }
-
-    public void updateToGameStart(JFrame view2) {
-        view2.setVisible(true);
-        this.setVisible(false);
     }
 
 
