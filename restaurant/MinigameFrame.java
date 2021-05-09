@@ -101,7 +101,7 @@ public class MinigameFrame extends JFrame{
 
     }
 
-    public void setPlayerFood(ArrayList<Food> f){
+    public void updatePlayerFood(ArrayList<Food> f){
         playerFood = f;
     }
 
