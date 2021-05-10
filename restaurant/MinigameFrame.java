@@ -51,25 +51,7 @@ public class MinigameFrame extends JFrame{
         tacoIcon = new ImageIcon(new ImageIcon("restaurant/images/transparentTacoNew.png").getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT));
         sandwichIcon = new ImageIcon(new ImageIcon("restaurant/images/transparentTurkeySandwichNew.png").getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT));
         */
-        System.out.println(playerFood.size());
-        for(int i = 0; i < playerFood.size(); i++){
-            System.out.println(i);
-           iconList.add(new ImageIcon(new ImageIcon(playerFood.get(i).getPictureLocation()).getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT)));
-           System.out.println("test");
-        }
-        System.out.println("test");
 
-
-
-
-        //Food buttons
-        int xBounds = 0;
-        for(int j = 0; j < iconList.size(); j++){
-            buttonList.add(new JButton(iconList.get(j)));
-            buttonList.get(j).setBounds(xBounds,850,100,100);
-            this.add(buttonList.get(j));
-            xBounds += 100;
-        }
         /*
 
         burgerButton = new JButton(burgerIcon);
