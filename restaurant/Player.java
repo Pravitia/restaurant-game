@@ -1,17 +1,19 @@
 package restaurant;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class Player {
 
     //private String Name;
-    private ArrayList<Food> Inventory;
+    private HashSet<Food> Inventory;
     private double Balance;
     private double moneyMade;
     public Player()
     {
         //this.Name = name;
-        this.Inventory = new ArrayList<Food>();
+        this.Inventory = new HashSet<Food>();
         this.Balance = 0;
         this.moneyMade = 0;
     }
@@ -21,8 +23,8 @@ public class Player {
     }
 
     public ArrayList<Food> getFood(){
-
-        return Inventory;
+        ArrayList<Food> Inventory2 = new ArrayList<>(Inventory);
+        return Inventory2;
     }
 
     public void addMoney(double moneyEarned){
