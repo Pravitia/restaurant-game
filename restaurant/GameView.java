@@ -69,10 +69,10 @@ public class GameView extends JFrame {
     // Changes view from GameStartFrame to RestaurantFrame
     public void updateToRestaurantFrame() {
         restaurantScreen.setVisible(true);
-        gameStartScreen.dispose();
-        final int Delay = 60000;
+        gameStartScreen.setVisible(false);
+        final int Delay = 10000;
         Timer t = new Timer(Delay, e -> {
-            restaurantScreen.dispose();
+            restaurantScreen.setVisible(false);
             gameStartScreen.setVisible(true);
         });
         t.setRepeats(false);
