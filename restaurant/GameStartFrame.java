@@ -28,6 +28,7 @@ public class GameStartFrame extends JFrame{
             }
         });
 
+        // Action Listener for the Gacha Button
         gachaButton.addActionListener(e -> {
             try {
                 Message msg = new StartGachaMessage();
