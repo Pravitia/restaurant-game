@@ -9,6 +9,11 @@ public class GameModel {
         this.user = new Player();
     }
 
+    public Player getUser()
+    {
+        return user;
+    }
+
 
 
 
