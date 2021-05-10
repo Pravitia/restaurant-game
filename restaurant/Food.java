@@ -8,12 +8,13 @@ public class Food implements Consumables{
     private int Rarity;
     private String Name;
     private String pictureLocation;
-    public ArrayList<Food> loot = new ArrayList<>();
-
+    public ArrayList<Food> loot;
+    // Construct Food
     public Food() {
+        loot = new ArrayList<>();
         loot.add(new Food(25, 5, "Steak", "restaurant/images/transparentSteakNew.png"));
         loot.add(new Food(18, 4, "Rotisserie Chicken", "restaurant/images/transparentRotisserieChickenNew.png"));
-        loot.add(new Food(1.50, 3, "Hotdog", "restaurant/images/transparentHotdogNew.png"));
+        loot.add(new Food(1.50, 3, "Hot Dog", "restaurant/images/transparentHotdogNew.png"));
         loot.add(new Food(15, 4, "Burger", "restaurant/images/transparentBurgerNew.png"));
         loot.add(new Food(12, 4, "Pepperoni Pizza", "restaurant/images/transparentPepperoniPizzaNew.png"));
         loot.add(new Food(10, 3, "Turkey Sandwich", "restaurant/images/transparentTurkeySandwichNew.png"));

@@ -16,7 +16,8 @@ public class GameView extends JFrame {
     final int FRAME_HEIGHT = 1000;
 
     MainMenuComponent mainMenu = new MainMenuComponent();
-    JButton playButton, leaderboardButton;
+    JButton playButton;
+            //leaderboardButton;
 
     public GameView(BlockingQueue<Message> queue)
     {
@@ -28,8 +29,8 @@ public class GameView extends JFrame {
 
         this.playButton = new JButton("Play");
         playButton.setBounds(700,800,100,30);
-        this.leaderboardButton = new JButton("Leaderboard");
-        leaderboardButton.setBounds(100,800,200,30);
+        //this.leaderboardButton = new JButton("Leaderboard");
+        //leaderboardButton.setBounds(100,800,200,30);
 
         playButton.addActionListener(e -> {
             try {
@@ -41,7 +42,7 @@ public class GameView extends JFrame {
         });
 
         this.add(playButton);
-        this.add(leaderboardButton);
+        //this.add(leaderboardButton);
         this.add(mainMenu);
 
 
