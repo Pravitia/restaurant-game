@@ -70,7 +70,7 @@ public class GameView extends JFrame {
     public void updateToRestaurantFrame() {
         restaurantScreen.setVisible(true);
         gameStartScreen.setVisible(false);
-        final int Delay = 60000;
+        final int Delay = 10000;
         Timer t = new Timer(Delay, e -> {
             restaurantScreen.setVisible(false);
             gameStartScreen.setVisible(true);
