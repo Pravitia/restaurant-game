@@ -75,7 +75,6 @@ public class GameController {
             // Valve response to change view from GameStartFrame to RestaurantFrame
             // updateToRestaurantFrame is a view function that switches frames (Needs to be implemented)
             view.restaurantScreen.updatePlayerFood(model.user.getFood());
-            view.restaurantScreen.repaint();
             view.updateToRestaurantFrame();
             return ValveResponse.EXECUTED;
         }
