@@ -60,6 +60,27 @@ public class Food implements Consumables{
     public ArrayList<Food> getLoot(){
         return loot;
     }
+    
+    @Override
+    public int hashCode(){
+
+        return (int) this.getPrice() + getRarity() + getName().hashCode();
+
+    }
+
+    @Override
+    public boolean equals(Object o){
+        if (o == null) return false;
+        if (!(o instanceof Food))
+            return false;
+        if (o == this)
+            return true;
+        return this.getName() == ((Food) o).getName();
+    }
+
+    
+   
+    
 
     
 }

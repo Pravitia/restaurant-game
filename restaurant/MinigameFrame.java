@@ -11,7 +11,6 @@ import java.awt.Image.*;
 public class MinigameFrame extends JFrame{
     BlockingQueue<Message> queue;
     private ArrayList<Food> playerFood = new ArrayList<Food>();
-    private ArrayList<Food> secondList;
     private ArrayList<ImageIcon> iconList = new ArrayList<ImageIcon>();
     private ArrayList<JButton> buttonList = new ArrayList<JButton>();
 
