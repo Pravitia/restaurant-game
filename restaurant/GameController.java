@@ -105,8 +105,13 @@ public class GameController {
             // Valve response to roll for a single food
 
             SingleRollMessage msg = (SingleRollMessage) message;
+            Food foodRolled = msg.getFoodRolled();
+            String foodFilePath = foodRolled.getPictureLocation();
+            //display rolled food in display box
+            model.setPicture(foodFilePath);
+            view.updateGachaDisplay(model.getDisplayFood());
 
-            model.user.addFood(msg.getFoodRolled());
+            model.user.addFood(foodRolled);
             return ValveResponse.EXECUTED;
         }
     }

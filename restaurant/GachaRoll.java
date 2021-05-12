@@ -3,15 +3,21 @@ package restaurant;
 import java.util.ArrayList;
 import java.util.Random;
 
+//gacha model class
 public class GachaRoll {
     private ArrayList<Food> foodPool;
     private Random rand;
+
+
     public GachaRoll(ArrayList<Food> foodList)
     {
         foodPool = foodList;
         rand = new Random();
 
     }
+
+
+
 
     public Food getRandomFood()
     {

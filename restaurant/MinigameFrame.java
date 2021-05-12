@@ -5,7 +5,6 @@ import java.awt.*;
 import java.awt.geom.Rectangle2D;
 import java.util.ArrayList;
 import java.util.concurrent.BlockingQueue;
-import java.awt.Image.*;
 
 
 public class MinigameFrame extends JFrame{

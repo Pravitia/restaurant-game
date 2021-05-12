@@ -16,6 +16,9 @@ public class GameView extends JFrame {
     final int FRAME_HEIGHT = 1000;
 
     MainMenuComponent mainMenu = new MainMenuComponent();
+
+    String basepath = "restaurant/images/transparent.png";
+    GachaComponent gachaComp = new GachaComponent(basepath);
     JButton playButton;
             //leaderboardButton;
 
@@ -65,6 +68,18 @@ public class GameView extends JFrame {
     public void updateToGachaFrame() {
         gachaScreen.setVisible(true);
         gameStartScreen.setVisible(false);
+    }
+
+
+    public void updateGachaDisplay(String s){
+        System.out.println(s);
+        gachaScreen.remove(gachaComp);
+        gachaComp = new GachaComponent(s);
+        gachaScreen.add(gachaComp);
+        gachaScreen.setVisible(false);
+        gachaScreen.setVisible(true);
+
+
     }
 
     // Changes view from GameStartFrame to RestaurantFrame

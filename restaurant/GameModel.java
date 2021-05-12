@@ -4,6 +4,7 @@ package restaurant;
 public class GameModel {
 
     protected Player user;
+    String filepath;
 
     public GameModel() {
         this.user = new Player();
@@ -14,7 +15,15 @@ public class GameModel {
         return user;
     }
 
+    //for updating food picture in gacha
+    public void setPicture(String s){
+        this.filepath = s;
+    }
 
+    public String getDisplayFood()
+    {
+        return filepath;
+    }
 
 
 

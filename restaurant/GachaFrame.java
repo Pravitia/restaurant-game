@@ -10,9 +10,15 @@ public class GachaFrame extends JFrame{
     final int FRAME_WIDTH = 1500;
     final int FRAME_HEIGHT = 1000;
 
-    GachaComponent gacha = new GachaComponent();
+    String basepath = "restaurant/images/transparent.png";
+    GachaComponent gacha = new GachaComponent(basepath);
 
-    JButton backButton, oneRollButton;
+    //ImageIcon displayIcon;
+    //Food displayFood = null;
+
+    JButton backButton, oneRollButton, displayIconButton;
+
+
 
     public GachaFrame(BlockingQueue<Message> queue)
     {
@@ -47,6 +53,14 @@ public class GachaFrame extends JFrame{
             }
         });
 
+        //displayIcon = new ImageIcon(new ImageIcon(displayFood.getPictureLocation()).getImage().getScaledInstance(300, 300, Image.SCALE_DEFAULT));
+        //displayIcon = new ImageIcon(new ImageIcon("restaurant/images/transparentBurgerNew.png").getImage().getScaledInstance(300, 300, Image.SCALE_DEFAULT));
+
+        //this.displayIconButton = new JButton(displayIcon);
+       // displayIconButton.setBounds(1000, 500, 300, 300);
+
+
+        //this.add(displayIconButton);
         this.add(backButton);
         this.add(oneRollButton);
         //this.add(tenRollButton);
@@ -56,6 +70,9 @@ public class GachaFrame extends JFrame{
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
+    public void setDisplayFood(Food f){
+        //this.displayFood = f;
+    }
 
 }
 
