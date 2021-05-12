@@ -23,7 +23,7 @@ public class Player {
     }
 
     public ArrayList<Food> getFood(){
-        ArrayList<Food> Inventory2 = new ArrayList<>(Inventory);
+        ArrayList<Food> Inventory2 = new ArrayList<Food>(Inventory);
         return Inventory2;
     }
 
