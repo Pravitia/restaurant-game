@@ -84,6 +84,8 @@ public class GameController {
             view.restaurantScreen.updatePlayerFood(model.user.getFood());
             //gets the initial customer
             view.restaurantScreen.updateCustomer(model.getCustomer());
+            view.updateGameDisplay(model.getCustomer().getOrder().getPictureLocation());
+
             view.updateToRestaurantFrame();
             return ValveResponse.EXECUTED;
         }

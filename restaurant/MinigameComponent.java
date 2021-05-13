@@ -12,9 +12,9 @@ import java.io.IOException;
 public class MinigameComponent extends JComponent{
 
 
-    //static String filepath;
-    MinigameComponent(/*String filepath*/) {
-        //this.filepath = filepath;
+    static String filepath;
+    MinigameComponent(String filepath) {
+        this.filepath = filepath;
 
     }
 
@@ -30,7 +30,7 @@ public class MinigameComponent extends JComponent{
 
 
         g2.draw(instructionBox);
-        g2.drawString("Click the food as they show up", 600, 50);
+        g2.drawString("Click the food as they show up", 605, 50);
         g2.draw(displayBox);
 
 
@@ -40,15 +40,17 @@ public class MinigameComponent extends JComponent{
             e.printStackTrace();
         }
         g2.drawImage(customer, 100, 100, 300, 500, null);
+        g2.drawImage(displayFood, 600, 200, 300,300, null);
 
 
     }
 
 
-    private static BufferedImage customer;
+    private static BufferedImage customer, displayFood;
     private static void loadImage() throws IOException{
         customer = ImageIO.read(new File("restaurant/images/customer1.png"));
         //customer = ImageIO.read(new File(filepath));
+        displayFood = ImageIO.read(new File(filepath));
     }
 
 

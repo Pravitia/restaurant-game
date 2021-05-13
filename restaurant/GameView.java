@@ -24,6 +24,8 @@ public class GameView extends JFrame {
 
     String basepath = "restaurant/images/transparent.png";
     GachaComponent gachaComp = new GachaComponent(basepath);
+    MinigameComponent minigameComp = new MinigameComponent(basepath);
+
     JButton playButton;
             //leaderboardButton;
 
@@ -94,6 +96,15 @@ public class GameView extends JFrame {
         gachaScreen.add(gachaComp);
         gachaScreen.setVisible(false);
         gachaScreen.setVisible(true);
+
+    }
+
+
+    public void updateGameDisplay(String s){
+        restaurantScreen.remove(minigameComp);
+        minigameComp = new MinigameComponent(s);
+        restaurantScreen.add(minigameComp);
+
 
     }
     /**
