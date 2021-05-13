@@ -17,17 +17,25 @@ public class GachaFrame extends JFrame{
     //Food displayFood = null;
 
     JButton backButton, oneRollButton, displayIconButton;
+    JTextField moneyBar;
+    double money = 1000;
 
 
 
     public GachaFrame(BlockingQueue<Message> queue)
     {
         this.queue = queue;
+
         Font font = new Font("Arial", Font.BOLD, 30);
+        this.moneyBar = new JTextField("$" + money);
+        moneyBar.setFont(font);
+        moneyBar.setBounds(1300, 10, 200, 30);
+        moneyBar.setEditable(false);
+
         this.backButton = new JButton("Back");
         backButton.setBounds(10, 900, 90, 40);
         this.oneRollButton = new JButton("1 Roll");
-        oneRollButton.setBounds(650,700, 200, 70);
+        oneRollButton.setBounds(650,700, 150, 70);
         oneRollButton.setFont(font);
         /*
         this.tenRollButton = new JButton("10 Roll");
@@ -61,6 +69,7 @@ public class GachaFrame extends JFrame{
 
 
         //this.add(displayIconButton);
+        this.add(moneyBar);
         this.add(backButton);
         this.add(oneRollButton);
         //this.add(tenRollButton);

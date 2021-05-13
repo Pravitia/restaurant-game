@@ -26,14 +26,6 @@ public class MinigameFrame extends JFrame{
     JTextField moneyBar;
     double money = 0;
 
-    /*
-    ImageIcon burgerIcon, cupNoodleIcon, friesIcon, hotdogIcon, milkshakeIcon,
-                pizzaIcon, ramenIcon, chickenIcon, sodaIcon, steakIcon, cakeIcon,
-                sushiIcon, tacoIcon, sandwichIcon;
-    JButton burgerButton, cupNoodleButton, friesButton, hotdogButton, milkshakeButton,
-                pizzaButton, ramenButton, chickenButton, sodaButton, steakButton, cakeButton,
-                sushiButton, tacoButton, sandwichButton;
-     */
 
     public MinigameFrame(BlockingQueue<Message> queue)
     {
@@ -42,7 +34,7 @@ public class MinigameFrame extends JFrame{
         Font font = new Font("Arial", Font.BOLD, 30);
         this.moneyBar = new JTextField(String.format("$%.2f", money));
         moneyBar.setFont(font);
-        moneyBar.setBounds(1300, 10, 100, 30);
+        moneyBar.setBounds(1300, 10, 150, 30);
         moneyBar.setEditable(false);
 
         this.add(moneyBar);
@@ -61,10 +53,6 @@ public class MinigameFrame extends JFrame{
 
     public void updateCustomer(Customer c){
         currentCustomer = c;
-
-    }
-
-    public void updateMoney(double money){
 
     }
 
