@@ -56,10 +56,6 @@ public class MinigameFrame extends JFrame{
 
     }
 
-    public void updateMoney(double money){
-
-    }
-
     public void updateFrame(){
 
         for(int l = 0 ; l < buttonList.size(); l++){
