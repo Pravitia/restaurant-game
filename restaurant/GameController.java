@@ -22,6 +22,7 @@ public class GameController {
         valves.add(new StartGachaValve());
         valves.add(new SingleRollValve());
         valves.add(new BackToManageValve());
+        valves.add(new SellFoodValve());
     }
 
     public void mainLoop() {
@@ -132,6 +133,22 @@ public class GameController {
             // Valve response to go back to GameStartFrame from GachaFrame
 
             view.returnToGameStart();
+            return ValveResponse.EXECUTED;
+        }
+    }
+
+    private class SellFoodValve implements Valve {
+        public ValveResponse execute(Message message) {
+            if (message.getClass() != SellFoodMessage.class) {
+                return ValveResponse.MISS;
+            }
+
+            SellFoodMessage msg = (SellFoodMessage) message;
+            Food soldFood = msg.getSoldFood();
+            Customer newCustomer = new Customer(model.user.getFood());
+            if (soldFood.equals(newCustomer.getOrder())) {
+                model.user.addMoney(soldFood.getPrice());
+            }
             return ValveResponse.EXECUTED;
         }
     }

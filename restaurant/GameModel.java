@@ -32,7 +32,6 @@ public class GameModel {
     }
 
     public Customer makeCustomer(){
-
         return new Customer(user.getFood());
     }
 

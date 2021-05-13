@@ -6,4 +6,8 @@ public class SellFoodMessage implements Message {
     public SellFoodMessage (Food f) {
         soldFood = f;
     }
+
+    public Food getSoldFood() {
+        return soldFood;
+    }
 }

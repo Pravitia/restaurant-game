@@ -103,10 +103,14 @@ public class MinigameFrame extends JFrame{
             for(int i = 0 ; i < buttons.size(); i ++){
                 if (e.getSource() == buttons.get(i)) {
                     System.out.println(inventory.get(i).getName());
-
+                    try {
+                        Message msg = new SellFoodMessage(inventory.get(i));
+                        queue.put(msg);
+                    } catch (InterruptedException error) {
+                        // do nothing
+                    }
                 }
             }
-
         }
 
     }
