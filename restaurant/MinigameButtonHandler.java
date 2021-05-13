@@ -19,7 +19,7 @@ public class MinigameButtonHandler implements ActionListener {
 
         
         for(int i = 0 ; i < buttons.size(); i ++){
-        if (e.getSource() == buttons.get(i)) {
+            if (e.getSource() == buttons.get(i)) {
             System.out.println(inventory.get(i).getName());
         }
     }
