@@ -4,6 +4,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashSet;
 
+
 public class Player {
 
     //private String Name;
@@ -22,7 +23,7 @@ public class Player {
     }
     public void addFood(Food f){
         Inventory.add(f);
-
+    
     }
 
     public ArrayList<Food> getFood(){
