@@ -10,6 +10,12 @@ public class GameController {
     private GameModel model;
     private ArrayList<Valve> valves = new ArrayList<>();
 
+    /**
+     * The Game Controller that builds the restaurant
+     * @param queue To initialize the controller in the game state
+     * @param model To add the model logic to the controller
+     * @param view  To add the view to the controller
+     */
     public GameController (BlockingQueue<Message> queue, GameModel model, GameView view)
     {
         this.queue = queue;
