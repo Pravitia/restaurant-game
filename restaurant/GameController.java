@@ -151,8 +151,7 @@ public class GameController {
 
             SellFoodMessage msg = (SellFoodMessage) message;
             Food soldFood = msg.getSoldFood();
-            Customer newCustomer = new Customer(model.user.getFood());
-            if (soldFood.equals(newCustomer.getOrder())) {
+            if (soldFood.equals(model.makeCustomer().getOrder())) {
                 model.user.addMoney(soldFood.getPrice());
             }
             return ValveResponse.EXECUTED;
