@@ -3,7 +3,11 @@ package restaurant;
 import javax.swing.*;
 import java.util.concurrent.BlockingQueue;
 
-//View class
+
+/**
+ * View Class for the Restaurant Game
+ * @author Anson, Aaron, Harrison, Jordan
+ */
 public class GameView extends JFrame {
 
     BlockingQueue<Message> queue;
@@ -11,6 +15,7 @@ public class GameView extends JFrame {
     GameStartFrame gameStartScreen;
     GachaFrame gachaScreen;
     MinigameFrame restaurantScreen;
+
 
     final int FRAME_WIDTH = 1500;
     final int FRAME_HEIGHT = 1000;
@@ -22,10 +27,15 @@ public class GameView extends JFrame {
     JButton playButton;
             //leaderboardButton;
 
+    /**
+     * Initial Game View Part of the MVC
+     *
+     * Creates the view with all the other screens: gameStart, gachaSreen, and restaurantScreen
+     * @param queue
+     */
     public GameView(BlockingQueue<Message> queue)
     {
         this.queue = queue;
-
         this.gameStartScreen = new GameStartFrame(queue);
         this.gachaScreen = new GachaFrame(queue);
         this.restaurantScreen = new MinigameFrame(queue);
@@ -56,7 +66,10 @@ public class GameView extends JFrame {
 
     // Methods for Main screen GameView
 
-    // Changes view from GameView to GameStartFrame
+    /**
+     * Changes view from GameView to GameStartFrame
+     * @return Goes back to GameStartFrame
+     */
     public void updateToGameStart() {
         gameStartScreen.setVisible(true);
         this.dispose();
@@ -70,7 +83,10 @@ public class GameView extends JFrame {
         gameStartScreen.setVisible(false);
     }
 
-
+    /**
+     * Updates the Gacha Display
+     * @param s which acts the address to what food to print
+     */
     public void updateGachaDisplay(String s){
         System.out.println(s);
         gachaScreen.remove(gachaComp);
@@ -79,10 +95,25 @@ public class GameView extends JFrame {
         gachaScreen.setVisible(false);
         gachaScreen.setVisible(true);
 
-
     }
+    /**
+    public void updateGachaDisplayDuplicate(String s){
+        System.out.println(s);
+        System.out.println("Got a Duplicate");
+        gachaScreen.remove(gachaComp);
+        gachaComp = new GachaComponent(s);
+        gachaScreen.add(gachaComp);
+        gachaScreen.setVisible(false);
+        gachaScreen.setVisible(true);
+    }
+     **/
 
-    // Changes view from GameStartFrame to RestaurantFrame
+    /**
+     * Changes view from GameStartFrame to RestaurantFrame
+     * When it clicks play it goes from GameStartFrame to RestaurantFrame
+     * Then it will stay there for 60 seconds, and finally close after that time
+     *
+     */
     public void updateToRestaurantFrame() {
         restaurantScreen.setVisible(true);
         gameStartScreen.setVisible(false);
