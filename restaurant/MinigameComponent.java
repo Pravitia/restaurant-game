@@ -11,6 +11,8 @@ import java.io.IOException;
 
 public class MinigameComponent extends JComponent{
 
+
+
     MinigameComponent() {}
 
     public void paintComponent(Graphics g) {
@@ -28,8 +30,22 @@ public class MinigameComponent extends JComponent{
         g2.drawString("Click the food as they show up", 610, 50);
         g2.draw(displayBox);
 
+
+        try {
+            loadImage();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        g2.drawImage(customer, 100, 100, 300, 500, null);
+
+
     }
 
+
+    private static BufferedImage customer;
+    private static void loadImage() throws IOException{
+        customer = ImageIO.read(new File("restaurant/images/customer1.png"));
+    }
 
 
 }
