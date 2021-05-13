@@ -121,6 +121,15 @@ public class GameView extends JFrame {
         gachaScreen.moneyBar.setText(String.format("$%.2f", money));
     }
 
+    public void rollStatus(double money) {
+        if (money > 100) {
+            gachaScreen.oneRollButton.setEnabled(true);
+        }
+        else {
+            gachaScreen.oneRollButton.setEnabled(false);
+        }
+    }
+
     /**
     public void updateGachaDisplayDuplicate(String s){
         System.out.println(s);

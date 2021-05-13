@@ -104,6 +104,8 @@ public class GameController {
             // updateToGachaFrame is a view function that switches frames (Needs to be implemented)
 
             view.updateToGachaFrame();
+            view.rollStatus(model.user.getBalance());
+            view.updateGachaMoney(model.user.getBalance());
             return ValveResponse.EXECUTED;
         }
     }
@@ -125,16 +127,23 @@ public class GameController {
             Food foodRolled = msg.getFoodRolled();
             String foodFilePath = foodRolled.getPictureLocation();
             //display rolled food in display box
-//            for(int i =0; i < model.user.getFood().size(); i++) {
-//                if (model.user.getFood().get(i).equals(foodRolled)) {
-//                    model.setPicture(foodFilePath);
-//                    view.updateGachaDisplay(model.getDisplayFood());
-//                    return ValveResponse.EXECUTED;
-//                }
-//            }
+            for(int i =0; i < model.user.getFood().size(); i++) {
+                if (model.user.getFood().get(i).equals(foodRolled)) {
+                    model.setPicture(foodFilePath);
+                    view.updateGachaDisplay(model.getDisplayFood());
+                    return ValveResponse.EXECUTED;
+                }
+            }
             model.setPicture(foodFilePath);
             view.updateGachaDisplay(model.getDisplayFood());
-            view.updateGachaMoney(model.user.getMoneyMade());
+            view.rollStatus(model.user.getBalance());
+            if (model.user.getBalance() >= 100) {
+                model.user.subtractMoney();
+                model.user.addFood(foodRolled);
+            }
+//            model.user.subtractMoney();
+//            model.user.addFood(foodRolled);
+            view.updateGachaMoney(model.user.getBalance());
             return ValveResponse.EXECUTED;
         }
     }
@@ -163,7 +172,7 @@ public class GameController {
             if (soldFood.equals(model.getCustomer().getOrder())) {
                 //add money upon correct selection
                 model.user.addMoney(soldFood.getPrice());
-                view.updateMoney(model.user.getMoneyMade());
+                view.updateMoney(model.user.getBalance());
 
                 //creates new customer
                 model.makeCustomer();

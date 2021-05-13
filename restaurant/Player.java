@@ -34,7 +34,7 @@ public class Player {
         this.balance += moneyEarned;
     }
 
-    public double getMoneyMade()
+    public double getBalance()
     {
         return balance;
     }
