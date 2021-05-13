@@ -122,11 +122,24 @@ public class MinigameFrame extends JFrame{
         }
 
         int xBounds = 0;
+        int secondXBounds = 0;
+        int yBounds = 750;
         for(int j = 0; j < iconList.size(); j++){
-            buttonList.add(new JButton(iconList.get(j)));
-            buttonList.get(j).setBounds(xBounds,850,100,100);
-            this.add(buttonList.get(j));
-            xBounds += 100;
+            if(xBounds < 1500){
+                buttonList.add(new JButton(iconList.get(j)));
+                buttonList.get(j).setBounds(xBounds,yBounds,100,100);
+                this.add(buttonList.get(j));
+                xBounds += 100;
+            }
+            else{
+                buttonList.add(new JButton(iconList.get(j)));
+                buttonList.get(j).setBounds(secondXBounds,yBounds+100,100,100);
+                this.add(buttonList.get(j));
+                secondXBounds += 100;
+
+            }
+
+
         }
 
         this.add(minigame);
