@@ -12,9 +12,9 @@ import java.io.IOException;
 public class MinigameComponent extends JComponent{
 
 
-    static String filepath;
-    MinigameComponent(String filepath) {
-        this.filepath = filepath;
+    ///static String filepath;
+    MinigameComponent(/*String filepath*/) {
+        //this.filepath = filepath;
 
     }
 
@@ -47,7 +47,8 @@ public class MinigameComponent extends JComponent{
 
     private static BufferedImage customer;
     private static void loadImage() throws IOException{
-        customer = ImageIO.read(new File(filepath));
+        customer = ImageIO.read(new File("restaurant/images/customer1.png"));
+        //customer = ImageIO.read(new File(filepath));
     }
 
 

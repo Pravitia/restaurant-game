@@ -21,7 +21,7 @@ public class MinigameFrame extends JFrame{
     final int FRAME_HEIGHT = 1000;
 
     String basepath = "restaurant/images/transparent.png";
-    MinigameComponent minigame = new MinigameComponent(basepath);
+    MinigameComponent minigame = new MinigameComponent();
 
     /*
     ImageIcon burgerIcon, cupNoodleIcon, friesIcon, hotdogIcon, milkshakeIcon,
@@ -92,7 +92,8 @@ public class MinigameFrame extends JFrame{
             this.add(j);
         }
 
-        this.add(new MinigameComponent(currentCustomer.getPicture()));
+        //this.add(new MinigameComponent(currentCustomer.getPicture()));
+        this.add(minigame);
 
     }
 
