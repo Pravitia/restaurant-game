@@ -4,7 +4,6 @@ package restaurant;
 public class GameModel {
 
     protected Player user;
-    protected Customer newCustomer;
     String filepath;
 
     public GameModel() {
