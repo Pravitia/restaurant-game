@@ -15,6 +15,7 @@ public class MinigameFrame extends JFrame{
     private ArrayList<Food> playerFood = new ArrayList<Food>();
     private ArrayList<ImageIcon> iconList = new ArrayList<ImageIcon>();
     private ArrayList<JButton> buttonList = new ArrayList<JButton>();
+    private Customer currentCustomer;
 
     final int FRAME_WIDTH = 1500;
     final int FRAME_HEIGHT = 1000;
@@ -42,6 +43,11 @@ public class MinigameFrame extends JFrame{
         playerFood = f;
         updateFrame();
         
+    }
+
+    public void updateCustomer(Customer c){
+        currentCustomer = c;
+
     }
 
     public void updateFrame(){

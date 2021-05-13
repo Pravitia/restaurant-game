@@ -82,6 +82,8 @@ public class GameController {
             // Valve response to change view from GameStartFrame to RestaurantFrame
             // updateToRestaurantFrame is a view function that switches frames (Needs to be implemented)
             view.restaurantScreen.updatePlayerFood(model.user.getFood());
+            //gets the initial customer
+            view.restaurantScreen.updateCustomer(model.getCustomer());
             view.updateToRestaurantFrame();
             return ValveResponse.EXECUTED;
         }
@@ -151,8 +153,10 @@ public class GameController {
 
             SellFoodMessage msg = (SellFoodMessage) message;
             Food soldFood = msg.getSoldFood();
-            if (soldFood.equals(model.makeCustomer().getOrder())) {
+            if (soldFood.equals(model.getCustomer().getOrder())) {
                 model.user.addMoney(soldFood.getPrice());
+                //creates new customer
+                model.makeCustomer();
             }
             return ValveResponse.EXECUTED;
         }

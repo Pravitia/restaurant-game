@@ -5,6 +5,7 @@ public class GameModel {
 
     protected Player user;
     private GachaRoll roller;
+    private Customer newCustomer= new Customer(user.getFood());
     String filepath;
 
     public GameModel() {
@@ -31,8 +32,12 @@ public class GameModel {
         return filepath;
     }
 
-    public Customer makeCustomer(){
-        return new Customer(user.getFood());
+    public void makeCustomer(){
+        newCustomer = new Customer(user.getFood());
+    }
+
+    public Customer getCustomer(){
+        return newCustomer;
     }
 
 }
