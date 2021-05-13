@@ -40,7 +40,7 @@ public class MinigameFrame extends JFrame{
         this.queue = queue;
 
         Font font = new Font("Arial", Font.BOLD, 30);
-        this.moneyBar = new JTextField("$" + money);
+        this.moneyBar = new JTextField(String.format("$%.2f", money));
         moneyBar.setFont(font);
         moneyBar.setBounds(1300, 10, 100, 30);
         moneyBar.setEditable(false);
