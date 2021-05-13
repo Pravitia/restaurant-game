@@ -23,6 +23,9 @@ public class MinigameFrame extends JFrame{
     String basepath = "restaurant/images/transparent.png";
     MinigameComponent minigame = new MinigameComponent(basepath);
 
+    JTextField moneyBar;
+    double money = 0;
+
     /*
     ImageIcon burgerIcon, cupNoodleIcon, friesIcon, hotdogIcon, milkshakeIcon,
                 pizzaIcon, ramenIcon, chickenIcon, sodaIcon, steakIcon, cakeIcon,
@@ -36,6 +39,12 @@ public class MinigameFrame extends JFrame{
     {
         this.queue = queue;
 
+        Font font = new Font("Arial", Font.BOLD, 10);
+        this.moneyBar = new JTextField("$" + money);
+        moneyBar.setBounds(1300, 10, 100, 30);
+        moneyBar.setEditable(false);
+
+        this.add(moneyBar);
         this.add(minigame);
 
         this.setSize(FRAME_WIDTH, FRAME_HEIGHT);
@@ -51,6 +60,10 @@ public class MinigameFrame extends JFrame{
 
     public void updateCustomer(Customer c){
         currentCustomer = c;
+
+    }
+
+    public void updateMoney(double money){
 
     }
 

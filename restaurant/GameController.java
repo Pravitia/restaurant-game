@@ -156,7 +156,10 @@ public class GameController {
             SellFoodMessage msg = (SellFoodMessage) message;
             Food soldFood = msg.getSoldFood();
             if (soldFood.equals(model.getCustomer().getOrder())) {
+                //add money upon correct selection
                 model.user.addMoney(soldFood.getPrice());
+                view.updateMoney(model.user.getMoneyMade());
+
                 //creates new customer
                 model.makeCustomer();
                 view.restaurantScreen.updateCustomer(model.getCustomer());

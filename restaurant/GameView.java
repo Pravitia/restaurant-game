@@ -99,7 +99,10 @@ public class GameView extends JFrame {
 
     }
 
-
+    /**
+     * Updates the Display food display
+     * @param s which acts as the address to what food to print
+     */
     public void updateGameDisplay(String s){
         restaurantScreen.remove(minigameComp);
         minigameComp = new MinigameComponent(s);
@@ -108,6 +111,12 @@ public class GameView extends JFrame {
         restaurantScreen.setVisible(true);
 
     }
+
+    public void updateMoney(double money){
+        restaurantScreen.moneyBar.setText("$" + String.valueOf(money));
+
+    }
+
     /**
     public void updateGachaDisplayDuplicate(String s){
         System.out.println(s);
