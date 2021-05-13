@@ -12,7 +12,7 @@ import java.io.IOException;
 public class MinigameComponent extends JComponent{
 
 
-    ///static String filepath;
+    //static String filepath;
     MinigameComponent(/*String filepath*/) {
         //this.filepath = filepath;
 
@@ -30,7 +30,7 @@ public class MinigameComponent extends JComponent{
 
 
         g2.draw(instructionBox);
-        g2.drawString("Click the food as they show up", 610, 50);
+        g2.drawString("Click the food as they show up", 600, 50);
         g2.draw(displayBox);
 
 

@@ -20,7 +20,7 @@ public class MinigameFrame extends JFrame{
     final int FRAME_WIDTH = 1500;
     final int FRAME_HEIGHT = 1000;
 
-    String basepath = "restaurant/images/transparent.png";
+    //String basepath = "restaurant/images/transparent.png";
     MinigameComponent minigame = new MinigameComponent();
 
     /*
