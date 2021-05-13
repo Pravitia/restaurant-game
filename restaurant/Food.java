@@ -37,7 +37,7 @@ public class Food implements Consumables{
 
     @Override
     public int hashCode() {
-        return (int) this.getPrice() + this.getRarity() + this.getName().hashCode();
+        return (int) this.getPrice() + this.getRarity() + this.getName().hashCode() + this.getPictureLocation().hashCode();
     }
 
     @Override
@@ -46,7 +46,7 @@ public class Food implements Consumables{
         if (!(o instanceof Food)) return false;
         if (o == this) return true;
         Food other = (Food) o;
-        return this.getName().equals(other.getName()) && this.getRarity() == other.getRarity() && this.getPrice() == other.getPrice();
+        return this.getName().equals(other.getName()) && this.getRarity() == other.getRarity() && this.getPrice() == other.getPrice() && this.getPictureLocation() == other.getPictureLocation();
     }
 
     public String getPictureLocation()
