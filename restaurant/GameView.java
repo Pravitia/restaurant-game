@@ -104,7 +104,8 @@ public class GameView extends JFrame {
         restaurantScreen.remove(minigameComp);
         minigameComp = new MinigameComponent(s);
         restaurantScreen.add(minigameComp);
-
+        restaurantScreen.setVisible(false);
+        restaurantScreen.setVisible(true);
 
     }
     /**

@@ -160,8 +160,10 @@ public class GameController {
                 //creates new customer
                 model.makeCustomer();
                 view.restaurantScreen.updateCustomer(model.getCustomer());
-                
+                    //System.out.println(model.getCustomer());
+                view.updateGameDisplay(model.getCustomer().getOrder().getPictureLocation());
             }
+
             return ValveResponse.EXECUTED;
         }
     }
