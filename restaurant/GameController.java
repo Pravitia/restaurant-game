@@ -82,6 +82,7 @@ public class GameController {
                 return ValveResponse.MISS;
             }
 
+            view.updateMoney(model.user.getBalance());
             // Valve response to change view from GameStartFrame to RestaurantFrame
             // updateToRestaurantFrame is a view function that switches frames (Needs to be implemented)
             view.restaurantScreen.updatePlayerFood(model.user.getFood());
