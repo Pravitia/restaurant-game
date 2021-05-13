@@ -114,10 +114,19 @@ public class MinigameFrame extends JFrame{
     }
 
     public void updateFrame(){
+
+        for(int l = 0 ; l < buttonList.size(); l++){
+            buttonList.get(l).setVisible(false);
+
+        }
         iconList = new ArrayList<ImageIcon>();
         buttonList = new ArrayList<JButton>();
+        for(int k = 0; k < playerFood.size(); k++){
+            System.out.println(playerFood.get(k).getName());
+        }
         for(int i = 0; i < playerFood.size(); i++){
-            System.out.println(i);
+
+           
            iconList.add(new ImageIcon(new ImageIcon(playerFood.get(i).getPictureLocation()).getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT))); 
         }
 
