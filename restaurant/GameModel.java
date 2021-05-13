@@ -3,7 +3,7 @@ package restaurant;
 //Model class
 public class GameModel {
 
-    private Player user;
+    protected Player user;
     private GachaRoll roller;
     private Customer newCustomer;
     String filepath;
@@ -11,7 +11,7 @@ public class GameModel {
     public GameModel() {
         this.user = new Player();
         this.roller = new GachaRoll();
-        this.newCustomer = new Customer(user.getFood());
+        this.newCustomer = new Customer(getUser().getFood());
     }
 
     public Player getUser()

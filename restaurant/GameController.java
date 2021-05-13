@@ -156,8 +156,8 @@ public class GameController {
             if (soldFood.equals(model.getCustomer().getOrder())) {
                 model.user.addMoney(soldFood.getPrice());
                 //creates new customer
-                model.makeCustomer();
-                view.restaurantScreen.updateCustomer(model.getCustomer());
+               // model.makeCustomer();
+               // view.restaurantScreen.updateCustomer(model.getCustomer());
                 
             }
             return ValveResponse.EXECUTED;
