@@ -2,6 +2,8 @@ package restaurant;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.geom.Rectangle2D;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -74,7 +76,7 @@ public class MinigameFrame extends JFrame{
             }
         }
 
-        MinigameButtonHandler handler = new MinigameButtonHandler(buttonList, playerFood);
+        ButtonHandler handler = new ButtonHandler(buttonList, playerFood);
         for (JButton j : buttonList) {
             j.addActionListener(handler);
             this.add(j);
@@ -84,7 +86,30 @@ public class MinigameFrame extends JFrame{
 
     }
 
+    private class ButtonHandler implements ActionListener {
 
+        private ArrayList<JButton> buttons;
+        private ArrayList<Food> inventory;
+
+        public ButtonHandler (ArrayList<JButton> buttons, ArrayList<Food> inventory) {
+            this.buttons = buttons;
+            this.inventory = inventory;
+        }
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+
+
+            for(int i = 0 ; i < buttons.size(); i ++){
+                if (e.getSource() == buttons.get(i)) {
+                    System.out.println(inventory.get(i).getName());
+
+                }
+            }
+
+        }
+
+    }
 
 
 }
