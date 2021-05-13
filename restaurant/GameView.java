@@ -113,7 +113,7 @@ public class GameView extends JFrame {
     }
 
     public void updateMoney(double money){
-        restaurantScreen.moneyBar.setText("$" + String.valueOf(money));
+        restaurantScreen.moneyBar.setText(String.format("$%.2f", money));
 
     }
 
