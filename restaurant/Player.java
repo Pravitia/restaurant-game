@@ -16,6 +16,9 @@ public class Player {
         this.Inventory = new HashSet<Food>();
         this.Balance = 0;
         this.moneyMade = 0;
+        Inventory.add(new Food(1.5,3,"Bread", "restaurant/images/transparentBreadNew.png"));
+        Inventory.add(new Food(3, 3, "Onigiri", "restaurant/images/transparentOnigiriNew.png"));
+        Inventory.add(new Food(1, 3, "Cup Noodle", "restaurant/images/transparentCupNoodleNew.png"));
     }
     public void addFood(Food f){
         Inventory.add(f);

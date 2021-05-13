@@ -22,7 +22,7 @@ public class GachaRoll {
         loot.add(new Food(14, 4, "Ramen", "restaurant/images/transparentRamenNew.png"));
         loot.add(new Food(16, 4, "Sushi", "restaurant/images/transparentSushiNew.png"));
         loot.add(new Food(35, 5, "Strawberry Cake", "restaurant/images/transparentStrawberryCakeNew.png"));
-        loot.add(new Food(1, 3, "Cup Noodle", "restaurant/images/transparentCupNoodleNew.png"));
+        loot.add(new Food(5, 3, "Chicken Nuggets", "restaurant/images/transparentChickenNuggetsNew.png"));
         loot.add(new Food(13, 4, "Tacos", "restaurant/images/transparentTacoNew.png"));
         loot.add(new Food(2, 3, "Soda", "restaurant/images/transparentSodaNew.png"));
         loot.add(new Food(7, 3, "Milkshake", "restaurant/images/transparentMilkshakeNew.png"));
