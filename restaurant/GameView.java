@@ -33,7 +33,7 @@ public class GameView extends JFrame {
      * Initial Game View Part of the MVC
      *
      * Creates the view with all the other screens: gameStart, gachaSreen, and restaurantScreen
-     * @param queue push the queue into the View
+     * @param queue
      */
     public GameView(BlockingQueue<Message> queue)
     {
@@ -70,7 +70,7 @@ public class GameView extends JFrame {
 
     /**
      * Changes view from GameView to GameStartFrame
-     * Goes back to GameStartFrame
+     * @return Goes back to GameStartFrame
      */
     public void updateToGameStart() {
         gameStartScreen.setVisible(true);
@@ -99,7 +99,10 @@ public class GameView extends JFrame {
 
     }
 
-
+    /**
+     * Updates the Display food display
+     * @param s which acts as the address to what food to print
+     */
     public void updateGameDisplay(String s){
         restaurantScreen.remove(minigameComp);
         minigameComp = new MinigameComponent(s);
@@ -108,7 +111,13 @@ public class GameView extends JFrame {
         restaurantScreen.setVisible(true);
 
     }
-    /*
+
+    public void updateMoney(double money){
+        restaurantScreen.moneyBar.setText(String.format("$%.2f", money));
+
+    }
+
+    /**
     public void updateGachaDisplayDuplicate(String s){
         System.out.println(s);
         System.out.println("Got a Duplicate");
@@ -118,7 +127,7 @@ public class GameView extends JFrame {
         gachaScreen.setVisible(false);
         gachaScreen.setVisible(true);
     }
-     */
+     **/
 
     /**
      * Changes view from GameStartFrame to RestaurantFrame
