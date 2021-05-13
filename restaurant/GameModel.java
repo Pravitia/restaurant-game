@@ -4,15 +4,21 @@ package restaurant;
 public class GameModel {
 
     protected Player user;
+    private GachaRoll roller;
     String filepath;
 
     public GameModel() {
         this.user = new Player();
+        this.roller = new GachaRoll();
     }
 
     public Player getUser()
     {
         return user;
+    }
+
+    public GachaRoll getRoller(){
+        return roller;
     }
 
     //for updating food picture in gacha
