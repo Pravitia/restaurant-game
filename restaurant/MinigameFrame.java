@@ -19,14 +19,18 @@ public class MinigameFrame extends JFrame{
 
     final int FRAME_WIDTH = 1500;
     final int FRAME_HEIGHT = 1000;
-    MinigameComponent minigame = new MinigameComponent();
 
+    String basepath = "restaurant/images/transparent.png";
+    MinigameComponent minigame = new MinigameComponent(basepath);
+
+    /*
     ImageIcon burgerIcon, cupNoodleIcon, friesIcon, hotdogIcon, milkshakeIcon,
                 pizzaIcon, ramenIcon, chickenIcon, sodaIcon, steakIcon, cakeIcon,
                 sushiIcon, tacoIcon, sandwichIcon;
     JButton burgerButton, cupNoodleButton, friesButton, hotdogButton, milkshakeButton,
                 pizzaButton, ramenButton, chickenButton, sodaButton, steakButton, cakeButton,
                 sushiButton, tacoButton, sandwichButton;
+     */
 
     public MinigameFrame(BlockingQueue<Message> queue)
     {
@@ -88,7 +92,7 @@ public class MinigameFrame extends JFrame{
             this.add(j);
         }
 
-        this.add(minigame);
+        this.add(new MinigameComponent(currentCustomer.getPicture()));
 
     }
 
