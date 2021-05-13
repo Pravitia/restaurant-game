@@ -15,12 +15,11 @@ public class Customer {
 
     public Customer(ArrayList<Food> foodList)
     {
-        pictureLocationList.add("restaurant/images/customer1.png");
-        pictureLocationList.add("restaurant/images/customer2.png");
+
         orderList = foodList;
         rand = new Random();
         Order = foodList.get(rand.nextInt(foodList.size()));
-        picture = pictureLocationList.get(rand.nextInt(pictureLocationList.size()));
+        
     }
 
     public Food getOrder(){
@@ -40,6 +39,9 @@ public class Customer {
     }
 
     public String getPicture(){
+        pictureLocationList.add("restaurant/images/customer1.png");
+        pictureLocationList.add("restaurant/images/customer2.png");
+        picture = pictureLocationList.get(rand.nextInt(pictureLocationList.size()));
         return picture;
     }
 
