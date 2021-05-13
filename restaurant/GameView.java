@@ -122,11 +122,11 @@ public class GameView extends JFrame {
     }
 
     public void rollStatus(double money) {
-        if (money > 100) {
-            gachaScreen.oneRollButton.setEnabled(true);
+        if (money < 100) {
+            gachaScreen.oneRollButton.setEnabled(false);
         }
         else {
-            gachaScreen.oneRollButton.setEnabled(false);
+            gachaScreen.oneRollButton.setEnabled(true);
         }
     }
 

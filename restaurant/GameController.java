@@ -104,8 +104,8 @@ public class GameController {
             // Valve response to change view from GameStartFrame to GachaFrame
             // updateToGachaFrame is a view function that switches frames (Needs to be implemented)
             view.updateMoney(model.user.getBalance());
-            view.updateToGachaFrame();
             view.rollStatus(model.user.getBalance());
+            view.updateToGachaFrame();
             view.updateGachaMoney(model.user.getBalance());
             return ValveResponse.EXECUTED;
         }
@@ -132,7 +132,6 @@ public class GameController {
                 if (model.user.getFood().get(i).equals(foodRolled)) {
                     model.setPicture(foodFilePath);
                     view.updateGachaDisplay(model.getDisplayFood());
-                    return ValveResponse.EXECUTED;
                 }
             }
             model.setPicture(foodFilePath);
@@ -142,9 +141,8 @@ public class GameController {
                 model.user.subtractMoney();
                 model.user.addFood(foodRolled);
             }
-//            model.user.subtractMoney();
-//            model.user.addFood(foodRolled);
             view.updateGachaMoney(model.user.getBalance());
+            view.rollStatus(model.user.getBalance());
             return ValveResponse.EXECUTED;
         }
     }
