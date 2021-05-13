@@ -137,7 +137,6 @@ public class GameView extends JFrame {
      * Changes view from GameStartFrame to RestaurantFrame
      * When it clicks play it goes from GameStartFrame to RestaurantFrame
      * Then it will stay there for 60 seconds, and finally close after that time
-     *
      */
     public void updateToRestaurantFrame() {
         restaurantScreen.setVisible(true);
@@ -153,7 +152,10 @@ public class GameView extends JFrame {
 
     // Methods for GachaFrame
 
-    // Changes view from GachaFrame to GameStartFrame
+    /**
+     * Changes view from GachaFrame to GameStartFrame
+     * Switches Screen
+     */
     public void returnToGameStart() {
         gameStartScreen.setVisible(true);
         gachaScreen.setVisible(false);
