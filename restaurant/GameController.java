@@ -125,17 +125,16 @@ public class GameController {
             Food foodRolled = msg.getFoodRolled();
             String foodFilePath = foodRolled.getPictureLocation();
             //display rolled food in display box
-            for(int i =0; i < model.user.getFood().size(); i++) {
-                if (model.user.getFood().get(i).equals(foodRolled)) {
-                    model.setPicture(foodFilePath);
-                    view.updateGachaDisplay(model.getDisplayFood());
-                    return ValveResponse.EXECUTED;
-                }
-            }
+//            for(int i =0; i < model.user.getFood().size(); i++) {
+//                if (model.user.getFood().get(i).equals(foodRolled)) {
+//                    model.setPicture(foodFilePath);
+//                    view.updateGachaDisplay(model.getDisplayFood());
+//                    return ValveResponse.EXECUTED;
+//                }
+//            }
             model.setPicture(foodFilePath);
             view.updateGachaDisplay(model.getDisplayFood());
-
-            model.user.addFood(foodRolled);
+            view.updateGachaMoney(model.user.getMoneyMade());
             return ValveResponse.EXECUTED;
         }
     }

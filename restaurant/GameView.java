@@ -117,6 +117,10 @@ public class GameView extends JFrame {
 
     }
 
+    public void updateGachaMoney(double money) {
+        gachaScreen.moneyBar.setText(String.format("$%.2f", money));
+    }
+
     /**
     public void updateGachaDisplayDuplicate(String s){
         System.out.println(s);

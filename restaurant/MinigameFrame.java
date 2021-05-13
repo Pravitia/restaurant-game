@@ -24,7 +24,7 @@ public class MinigameFrame extends JFrame{
     MinigameComponent minigame = new MinigameComponent(basepath);
 
     JTextField moneyBar;
-    double money = 0;
+    double money = 500;
 
 
     public MinigameFrame(BlockingQueue<Message> queue)

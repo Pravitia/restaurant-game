@@ -9,14 +9,12 @@ public class Player {
 
     //private String Name;
     private HashSet<Food> Inventory;
-    private double Balance;
-    private double moneyMade;
+    private double balance;
     public Player()
     {
         //this.Name = name;
         this.Inventory = new HashSet<Food>();
-        this.Balance = 0;
-        this.moneyMade = 0;
+        this.balance = 500;
         Inventory.add(new Food(1.5,3,"Bread", "restaurant/images/transparentBreadNew.png"));
         Inventory.add(new Food(3, 3, "Onigiri", "restaurant/images/transparentOnigiriNew.png"));
         Inventory.add(new Food(1, 3, "Cup Noodle", "restaurant/images/transparentCupNoodleNew.png"));
@@ -33,20 +31,17 @@ public class Player {
 
     public void addMoney(double moneyEarned){
 
-        this.moneyMade += moneyEarned;
+        this.balance += moneyEarned;
     }
 
     public double getMoneyMade()
     {
-        return moneyMade;
+        return balance;
     }
 
-
-    public double getBalance()
-    {
-        return Balance;
+    public void subtractMoney() {
+        balance -= 100;
     }
-
     
 
 
