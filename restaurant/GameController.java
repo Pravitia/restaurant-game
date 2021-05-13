@@ -157,6 +157,8 @@ public class GameController {
                 model.user.addMoney(soldFood.getPrice());
                 //creates new customer
                 model.makeCustomer();
+                view.restaurantScreen.updateCustomer(model.getCustomer());
+                
             }
             return ValveResponse.EXECUTED;
         }
