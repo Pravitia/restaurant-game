@@ -31,6 +31,9 @@ public class GameController {
         valves.add(new SellFoodValve());
     }
 
+    /**
+     * Instantiate the mainloop that runs the game
+     */
     public void mainLoop() {
         ValveResponse response = ValveResponse.EXECUTED;
         Message message = null;
@@ -52,7 +55,9 @@ public class GameController {
         }
     }
 
-    // Valves used in MainMenuFrame. For "Play" and "Leaderboard" buttons
+    /**
+     * Valves used in MainMenuFrame. For "Play" and "Leaderboard" buttons
+     */
 
     private class StartGameValve implements Valve {
         public ValveResponse execute(Message message) {
@@ -68,11 +73,9 @@ public class GameController {
         }
     }
 
-    // Leaderboard valve to be implemented
-
-
-    // Valves used in GameStartFrame. For "Start Game" and "Gacha" buttons
-
+    /**
+     *  Valves used in GameStartFrame. For "Start Game" and "Gacha" buttons
+     */
     private class PlayGameValve implements Valve {
         public ValveResponse execute(Message message) {
             if (message.getClass() != PlayGameMessage.class) {
@@ -105,7 +108,10 @@ public class GameController {
         }
     }
 
-    // Valves used in GachaFrame. For "Roll 1", "Roll 10" (may implement later), and "Back" buttons
+    /**
+     * SingleRollValve method
+     * Valves used in GachaFrame. For "Roll 1", "Roll 10" (may implement later), and "Back" buttons
+     */
 
     private class SingleRollValve implements Valve {
         public ValveResponse execute(Message message) {

@@ -12,11 +12,22 @@ import java.io.IOException;
 public class GachaComponent extends JComponent{
 
 
-    static String filepath;
+    static String filepath;     // File path of the picture
+
+    /**
+     * The constructor of the GachaComponent
+     * Handles the view and the scnery of the Gacha Screen
+     * @param filepath the string of the filepath of the Picture
+     */
     public GachaComponent(String filepath) {
         this.filepath = filepath;
     }
 
+    /**
+     * Paint Component
+     * Draw the background with GACHA button and other pictures
+     * @param g the graphic to draw
+     */
     public void paintComponent(Graphics g){
         Graphics2D g2 = (Graphics2D) g;
 
