@@ -6,12 +6,11 @@ import java.util.Random;
 //gacha model class
 public class GachaRoll {
     private Random rand;
-    private ArrayList<Food> loot;
+    private ArrayList<Food> loot = new ArrayList<>();
 
     public GachaRoll()
     {
         rand = new Random();
-        loot = new ArrayList<>();
         loot.add(new Food(25, 5, "Steak", "restaurant/images/transparentSteakNew.png"));
         loot.add(new Food(18, 4, "Rotisserie Chicken", "restaurant/images/transparentRotisserieChickenNew.png"));
         loot.add(new Food(1.50, 3, "Hot Dog", "restaurant/images/transparentHotdogNew.png"));
