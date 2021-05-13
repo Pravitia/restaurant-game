@@ -103,7 +103,7 @@ public class GameController {
 
             // Valve response to change view from GameStartFrame to GachaFrame
             // updateToGachaFrame is a view function that switches frames (Needs to be implemented)
-
+            view.updateMoney(model.user.getBalance());
             view.updateToGachaFrame();
             view.rollStatus(model.user.getBalance());
             view.updateGachaMoney(model.user.getBalance());
