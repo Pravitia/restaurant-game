@@ -138,7 +138,7 @@ public class GameController {
             view.updateGachaDisplay(model.getDisplayFood());
             view.rollStatus(model.user.getBalance());
             if (model.user.getBalance() >= 100) {
-                model.user.subtractMoney();
+                model.user.subtractFromGachaRoll();
                 model.user.addFood(foodRolled);
             }
             view.updateGachaMoney(model.user.getBalance());
