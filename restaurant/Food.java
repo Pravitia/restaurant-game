@@ -1,7 +1,9 @@
 package restaurant;
 
-import java.util.ArrayList;
-
+/**
+ * Food Class
+ * Used to build the food object to sell to customers
+ */
 public class Food{
 
     private double Price;
@@ -9,8 +11,13 @@ public class Food{
     private String Name;
     private String pictureLocation;
 
-    // Construct Food
-
+    /**
+     * Food Constructor
+     * @param price price of food
+     * @param rarity rarity of food
+     * @param name name of the food
+     * @param pictureLocation address location for the picture
+     */
     public Food(double price, int rarity, String name, String pictureLocation)
     {
         this.Price = price;
@@ -20,24 +27,46 @@ public class Food{
 
     }
 
+    /**
+     * Getter method for price
+     * @return Price
+     */
     public double getPrice() {
         
         return this.Price;
     }
+
+    /**
+     * Getter method for name
+     * @return Name
+     */
     public String getName() {
         
         return this.Name;
     }
 
+    /**
+     * Getter Method for Rarity
+     * @return Rarity
+     */
     public int getRarity()
     {
         return Rarity;
     }
 
+    /**
+     * Get the hashcode of Food
+     * @return hashcode of the Food
+     */
     public int hashCode() {
         return (int) this.getPrice() + this.getRarity() + this.getName().hashCode() + this.getPictureLocation().hashCode();
     }
 
+    /**
+     * Food equal method
+     * @param o Get another object
+     * @return boolean if it is equal or not
+     */
     public boolean equals(Object o) {
         if (o == null) return false;
         if (!(o instanceof Food)) return false;
