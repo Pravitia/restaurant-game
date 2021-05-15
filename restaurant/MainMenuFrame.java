@@ -2,7 +2,6 @@ package restaurant;
 
 import restaurant.message.Message;
 import restaurant.message.StartGameMessage;
-
 import javax.swing.*;
 import java.util.concurrent.BlockingQueue;
 
@@ -14,15 +13,12 @@ public class MainMenuFrame extends JFrame {
     MainMenuComponent mainMenu = new MainMenuComponent();
 
     JButton playButton;
-            //leaderboardButton;
 
     public MainMenuFrame(BlockingQueue<Message> queue)
     {
         this.queue = queue;
         this.playButton = new JButton("Play");
         playButton.setBounds(700,800,100,30);
-        //this.leaderboardButton = new JButton("Leaderboard");
-        //leaderboardButton.setBounds(100,800,200,30);
 
         playButton.addActionListener(e -> {
             try {
@@ -34,7 +30,6 @@ public class MainMenuFrame extends JFrame {
         });
 
         this.add(playButton);
-        //this.add(leaderboardButton);
         this.add(mainMenu);
         this.setSize(FRAME_WIDTH, FRAME_HEIGHT);
         this.setVisible(true);
@@ -42,6 +37,10 @@ public class MainMenuFrame extends JFrame {
 
     }
 
+    /**
+     * Move from Title Screen to Game Screen
+     * @param view
+     */
     public void updateToGameStart(JFrame view) {
         view.setVisible(true);
         this.setVisible(false);
