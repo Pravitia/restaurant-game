@@ -1,4 +1,7 @@
-package restaurant;
+package restaurant.message;
+
+import restaurant.Food;
+import restaurant.Message;
 
 public class SellFoodMessage implements Message {
     private Food soldFood;

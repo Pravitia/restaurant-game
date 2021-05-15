@@ -1,4 +1,8 @@
-package restaurant;
+package restaurant.message;
+import restaurant.Food;
+import restaurant.GachaRoll;
+import restaurant.Message;
+
 import java.util.ArrayList;
 
 public class SingleRollMessage implements Message {

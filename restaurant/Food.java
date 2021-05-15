@@ -2,7 +2,7 @@ package restaurant;
 
 import java.util.ArrayList;
 
-public class Food implements Consumables{
+public class Food{
 
     private double Price;
     private int Rarity;
@@ -19,12 +19,11 @@ public class Food implements Consumables{
         this.pictureLocation = pictureLocation;
 
     }
-    @Override
+
     public double getPrice() {
         
         return this.Price;
     }
-    @Override
     public String getName() {
         
         return this.Name;
@@ -35,25 +34,25 @@ public class Food implements Consumables{
         return Rarity;
     }
 
-    @Override
     public int hashCode() {
         return (int) this.getPrice() + this.getRarity() + this.getName().hashCode() + this.getPictureLocation().hashCode();
     }
 
-    @Override
     public boolean equals(Object o) {
         if (o == null) return false;
         if (!(o instanceof Food)) return false;
         if (o == this) return true;
         Food other = (Food) o;
-        return this.getName().equals(other.getName()) && this.getRarity() == other.getRarity() && this.getPrice() == other.getPrice() && this.getPictureLocation() == other.getPictureLocation();
+        return this.getName().equals(other.getName()) && this.getRarity() == other.getRarity() && this.getPrice() == other.getPrice() && this.getPictureLocation().equals(other.getPictureLocation());
     }
 
+    /**
+     * Returns the picture address in the game
+     * @return pictureLocation
+     */
     public String getPictureLocation()
     {
         return pictureLocation;
     }
 
-
-    
 }

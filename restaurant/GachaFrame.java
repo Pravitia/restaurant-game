@@ -1,5 +1,8 @@
 package restaurant;
 
+import restaurant.message.BackToManageMessage;
+import restaurant.message.SingleRollMessage;
+
 import javax.swing.*;
 import java.awt.*;
 import java.util.concurrent.BlockingQueue;

@@ -1,6 +1,7 @@
 package restaurant;
 
-import java.lang.reflect.Array;
+import restaurant.message.*;
+
 import java.util.ArrayList;
 import java.util.concurrent.BlockingQueue;
 
@@ -115,7 +116,6 @@ public class GameController {
      * SingleRollValve method
      * Valves used in GachaFrame. For "Roll 1", "Roll 10" (may implement later), and "Back" buttons
      */
-
     private class SingleRollValve implements Valve {
         public ValveResponse execute(Message message) {
             if (message.getClass() != SingleRollMessage.class) {

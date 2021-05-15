@@ -1,20 +1,20 @@
 package restaurant;
 
+import restaurant.message.SellFoodMessage;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.geom.Rectangle2D;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.concurrent.BlockingQueue;
 
 
 public class MinigameFrame extends JFrame{
     BlockingQueue<Message> queue;
-    private ArrayList<Food> playerFood = new ArrayList<Food>();
-    private ArrayList<ImageIcon> iconList = new ArrayList<ImageIcon>();
-    private ArrayList<JButton> buttonList = new ArrayList<JButton>();
+    private ArrayList<Food> playerFood = new ArrayList<>();
+    private ArrayList<ImageIcon> iconList = new ArrayList<>();
+    private ArrayList<JButton> buttonList = new ArrayList<>();
     private Customer currentCustomer;
 
     final int FRAME_WIDTH = 1500;
@@ -62,8 +62,8 @@ public class MinigameFrame extends JFrame{
             buttonList.get(l).setVisible(false);
 
         }
-        iconList = new ArrayList<ImageIcon>();
-        buttonList = new ArrayList<JButton>();
+        iconList = new ArrayList<>();
+        buttonList = new ArrayList<>();
 
         for(int i = 0; i < playerFood.size(); i++){
            iconList.add(new ImageIcon(new ImageIcon(playerFood.get(i).getPictureLocation()).getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT))); 
