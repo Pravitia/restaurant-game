@@ -1,5 +1,6 @@
 package restaurant;
 
+import restaurant.message.Message;
 import restaurant.message.SellFoodMessage;
 
 import javax.swing.*;

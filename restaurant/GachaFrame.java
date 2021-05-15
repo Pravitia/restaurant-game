@@ -1,6 +1,7 @@
 package restaurant;
 
 import restaurant.message.BackToManageMessage;
+import restaurant.message.Message;
 import restaurant.message.SingleRollMessage;
 
 import javax.swing.*;

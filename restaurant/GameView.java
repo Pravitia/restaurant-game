@@ -1,5 +1,8 @@
 package restaurant;
 
+import restaurant.message.Message;
+import restaurant.message.StartGameMessage;
+
 import javax.swing.*;
 import java.util.concurrent.BlockingQueue;
 

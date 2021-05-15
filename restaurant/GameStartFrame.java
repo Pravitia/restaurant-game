@@ -1,5 +1,6 @@
 package restaurant;
 
+import restaurant.message.Message;
 import restaurant.message.PlayGameMessage;
 import restaurant.message.StartGachaMessage;
 

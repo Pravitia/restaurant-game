@@ -1,8 +1,7 @@
 package restaurant;
 
-import javax.swing.*;
-import java.awt.event.*;
-import java.util.ArrayList;
+import restaurant.message.Message;
+
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
