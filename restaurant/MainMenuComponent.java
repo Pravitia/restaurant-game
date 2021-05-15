@@ -10,11 +10,10 @@ import java.io.IOException;
 
 public class MainMenuComponent extends JComponent {
 
-    public MainMenuComponent(){
-
-    }
-
-
+    /**
+     * Pains the title screen of the game
+     * @param g
+     */
     public void paintComponent(Graphics g) {
         Graphics2D g2 = (Graphics2D) g;
         //Title box
@@ -39,8 +38,12 @@ public class MainMenuComponent extends JComponent {
 
     }
 
-    //everything to do with images goes here
     private static BufferedImage titleBurger;
+
+    /**
+     * Loads the Title Burger
+     * @throws IOException
+     */
     private static void loadImage() throws IOException{
         titleBurger = ImageIO.read(new File("restaurant/images/transparentBurgerNew.png"));
     }
