@@ -3,14 +3,20 @@ package restaurant;
 import java.util.ArrayList;
 import java.util.Random;
 
-//gacha model class
+/**
+ * GachaRoll with the rolling function
+ */
 public class GachaRoll {
     private Random rand;
-    private ArrayList<Food> loot = new ArrayList<>();
+    private ArrayList<Food> loot;
 
+    /**
+     * Constructor for GachaRoll, stores all the food into an ArrayList
+     */
     public GachaRoll()
     {
         rand = new Random();
+        loot = new ArrayList<>();
         loot.add(new Food(25, 5, "Steak", "restaurant/images/transparentSteakNew.png"));
         loot.add(new Food(18, 4, "Rotisserie Chicken", "restaurant/images/transparentRotisserieChickenNew.png"));
         loot.add(new Food(1.50, 3, "Hot Dog", "restaurant/images/transparentHotdogNew.png"));
@@ -27,6 +33,10 @@ public class GachaRoll {
         loot.add(new Food(7, 3, "Milkshake", "restaurant/images/transparentMilkshakeNew.png"));
     }
 
+    /**
+     * Getter method to pick a random food to give the player
+     * @return a random food
+     */
     public Food getRandomFood()
     {
         return loot.get(rand.nextInt(loot.size()));

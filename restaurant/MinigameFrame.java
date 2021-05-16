@@ -59,10 +59,11 @@ public class MinigameFrame extends JFrame{
 
     public void updateFrame(){
 
-        for(int l = 0 ; l < buttonList.size(); l++){
-            buttonList.get(l).setVisible(false);
-
+        for(JButton button : buttonList)
+        {
+            button.setVisible(false);
         }
+
         iconList = new ArrayList<>();
         buttonList = new ArrayList<>();
 
@@ -112,8 +113,6 @@ public class MinigameFrame extends JFrame{
 
         @Override
         public void actionPerformed(ActionEvent e) {
-
-
             for(int i = 0 ; i < buttons.size(); i ++){
                 if (e.getSource() == buttons.get(i)) {
                     System.out.println(inventory.get(i).getName());

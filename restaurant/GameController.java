@@ -5,6 +5,9 @@ import restaurant.message.*;
 import java.util.ArrayList;
 import java.util.concurrent.BlockingQueue;
 
+/**
+ * Controller of the Game
+ */
 public class GameController {
     BlockingQueue<Message> queue;
     private GameView view;

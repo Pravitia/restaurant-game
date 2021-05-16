@@ -1,6 +1,8 @@
 package restaurant;
 
-//Model class
+/**
+ * Model for al the logic in the game
+ */
 public class GameModel {
 
     protected Player user;
