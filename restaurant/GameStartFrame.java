@@ -7,6 +7,9 @@ import restaurant.message.StartGachaMessage;
 import javax.swing.*;
 import java.util.concurrent.BlockingQueue;
 
+/**
+ * Frame for the Game Screen (View)
+ */
 public class GameStartFrame extends JFrame{
     BlockingQueue<Message> queue;
     final int FRAME_WIDTH = 1500;
@@ -15,6 +18,10 @@ public class GameStartFrame extends JFrame{
 
     JButton startGameButton, gachaButton;
 
+    /**
+     * Constructor for GameStartFrame
+     * @param queue Bring queue into the Game Start Frame
+     */
     public GameStartFrame(BlockingQueue<Message> queue)
     {
         this.queue = queue;

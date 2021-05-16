@@ -9,7 +9,6 @@ import java.util.concurrent.BlockingQueue;
 
 /**
  * View Class for the Restaurant Game
- * @author Anson, Aaron, Harrison, Jordan
  */
 public class GameView extends JFrame {
 
@@ -18,7 +17,6 @@ public class GameView extends JFrame {
     GameStartFrame gameStartScreen;
     GachaFrame gachaScreen;
     MinigameFrame restaurantScreen;
-
 
     final int FRAME_WIDTH = 1500;
     final int FRAME_HEIGHT = 1000;
@@ -82,7 +80,9 @@ public class GameView extends JFrame {
 
     // Methods for GameStartFrame
 
-    // Changes view from GameStartFrame to GachaFrame
+    /**
+     *  Changes view from GameStartFrame to GachaFrame
+     */
     public void updateToGachaFrame() {
         gachaScreen.setVisible(true);
         gameStartScreen.setVisible(false);
@@ -115,6 +115,10 @@ public class GameView extends JFrame {
 
     }
 
+    /**
+     * Set the Money text to the new amount
+     * @param money The amount of money to display
+     */
     public void updateMoney(double money){
         restaurantScreen.moneyBar.setText(String.format("$%.2f", money));
 
@@ -124,6 +128,10 @@ public class GameView extends JFrame {
         gachaScreen.moneyBar.setText(String.format("$%.2f", money));
     }
 
+    /**
+     * Checks if Player can roll
+     * @param money Needs at least $100
+     */
     public void rollStatus(double money) {
         if (money < 100) {
             gachaScreen.oneRollButton.setEnabled(false);
@@ -132,18 +140,6 @@ public class GameView extends JFrame {
             gachaScreen.oneRollButton.setEnabled(true);
         }
     }
-
-    /**
-    public void updateGachaDisplayDuplicate(String s){
-        System.out.println(s);
-        System.out.println("Got a Duplicate");
-        gachaScreen.remove(gachaComp);
-        gachaComp = new GachaComponent(s);
-        gachaScreen.add(gachaComp);
-        gachaScreen.setVisible(false);
-        gachaScreen.setVisible(true);
-    }
-     **/
 
     /**
      * Changes view from GameStartFrame to RestaurantFrame

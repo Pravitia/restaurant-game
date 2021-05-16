@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 /**
- *
+ * Customer to give the Player an objective
  */
 public class Customer {
 

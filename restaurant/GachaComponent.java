@@ -8,7 +8,9 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-
+/**
+ * Build the view portion of the Gacha Frame
+ */
 public class GachaComponent extends JComponent{
 
 
@@ -57,6 +59,11 @@ public class GachaComponent extends JComponent{
     }
 
     private static BufferedImage burger, taco, hotdog, sushi, soda, display;
+
+    /**
+     * Load images into the variables
+     * @throws IOException
+     */
     private static void loadImage() throws IOException{
        burger = ImageIO.read(new File("restaurant/images/transparentBurgerNew.png"));
        taco = ImageIO.read(new File("restaurant/images/transparentTacoNew.png"));
