@@ -10,8 +10,10 @@ import java.io.IOException;
 
 public class GameStartComponent extends JComponent{
 
-    public GameStartComponent() {}
-
+    /**
+     * Paint the Title Box
+     * @param g To draw Rectangle
+     */
     public void paintComponent(Graphics g){
         Graphics2D g2 = (Graphics2D) g;
 
