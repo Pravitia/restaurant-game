@@ -99,6 +99,10 @@ public class GameController {
         }
     }
 
+    /**
+     * StartGachaValve method
+     * Valves used in GachaFrame
+     */
     private class StartGachaValve implements Valve {
         public ValveResponse execute(Message message) {
             if (message.getClass() != StartGachaMessage.class) {
@@ -117,7 +121,7 @@ public class GameController {
 
     /**
      * SingleRollValve method
-     * Valves used in GachaFrame. For "Roll 1", "Roll 10" (may implement later), and "Back" buttons
+     * Valves used in GachaFrame. For "Roll 1" and "Back" buttons
      */
     private class SingleRollValve implements Valve {
         public ValveResponse execute(Message message) {

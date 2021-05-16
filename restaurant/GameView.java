@@ -28,7 +28,6 @@ public class GameView extends JFrame {
     MinigameComponent minigameComp = new MinigameComponent(basepath);
 
     JButton playButton;
-            //leaderboardButton;
 
     /**
      * Initial Game View Part of the MVC

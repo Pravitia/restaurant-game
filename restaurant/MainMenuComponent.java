@@ -8,6 +8,9 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * Used to build the Title screen
+ */
 public class MainMenuComponent extends JComponent {
 
     /**
