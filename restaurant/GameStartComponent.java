@@ -8,6 +8,9 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * Class to draw the Title Screen
+ */
 public class GameStartComponent extends JComponent{
 
     /**
