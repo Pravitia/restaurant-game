@@ -45,7 +45,7 @@ public class Player {
 
     /**
      * Adds money to the balance from food sale
-     * @param moneyEarned
+     * @param moneyEarned Get the money earned from selling Food
      */
     public void addMoney(double moneyEarned){
 

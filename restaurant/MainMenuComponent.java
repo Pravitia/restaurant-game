@@ -12,7 +12,7 @@ public class MainMenuComponent extends JComponent {
 
     /**
      * Pains the title screen of the game
-     * @param g
+     * @param g To draw the Title Screen
      */
     public void paintComponent(Graphics g) {
         Graphics2D g2 = (Graphics2D) g;

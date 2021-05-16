@@ -36,7 +36,7 @@ public class GameView extends JFrame {
      * Initial Game View Part of the MVC
      *
      * Creates the view with all the other screens: gameStart, gachaSreen, and restaurantScreen
-     * @param queue
+     * @param queue Takes in queue
      */
     public GameView(BlockingQueue<Message> queue)
     {
@@ -73,7 +73,7 @@ public class GameView extends JFrame {
 
     /**
      * Changes view from GameView to GameStartFrame
-     * @return Goes back to GameStartFrame
+     * Goes back to GameStartFrame
      */
     public void updateToGameStart() {
         gameStartScreen.setVisible(true);

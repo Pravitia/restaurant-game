@@ -39,7 +39,7 @@ public class MainMenuFrame extends JFrame {
 
     /**
      * Move from Title Screen to Game Screen
-     * @param view
+     * @param view Get the view to refresh
      */
     public void updateToGameStart(JFrame view) {
         view.setVisible(true);
