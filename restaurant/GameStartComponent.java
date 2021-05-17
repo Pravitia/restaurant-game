@@ -19,11 +19,26 @@ public class GameStartComponent extends JComponent{
      */
     public void paintComponent(Graphics g){
         Graphics2D g2 = (Graphics2D) g;
+        try {
+            loadImage();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        g2.drawImage(background, 0, 0, 1500, 1000, null);
 
-        //Title box
+    //Title box
         Rectangle2D.Double titleBox = new Rectangle2D.Double(500, 20, 500, 75);
+    }
 
 
+    private static BufferedImage background;
+
+    /**
+     * Loads the Title Burger
+     * @throws IOException
+     */
+    private static void loadImage() throws IOException{
+        background = ImageIO.read(new File("restaurant/images/mainMenuBackground.png"));
     }
 
 }
