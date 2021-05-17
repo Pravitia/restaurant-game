@@ -12,7 +12,7 @@ import java.io.IOException;
 public class MinigameComponent extends JComponent{
 
 
-    static String filepath;
+    private static String filepath;
     MinigameComponent(String filepath) {
         this.filepath = filepath;
 
