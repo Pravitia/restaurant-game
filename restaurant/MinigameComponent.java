@@ -8,16 +8,25 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-
+/**
+ * View for the Minigame Component
+ */
 public class MinigameComponent extends JComponent{
 
-
     static String filepath;
+
+    /**
+     * Constructor of MinigameComponent
+     * @param filepath Takes filepath for the transparent pictures for the frame
+     */
     MinigameComponent(String filepath) {
         this.filepath = filepath;
-
     }
 
+    /**
+     * Paint the view for the Minigame
+     * @param g Paint the Text
+     */
     public void paintComponent(Graphics g) {
         Graphics2D g2 = (Graphics2D) g;
 
@@ -48,6 +57,11 @@ public class MinigameComponent extends JComponent{
 
 
     private static BufferedImage customer, displayFood, background;
+
+    /**
+     * Load the images of the customer and background to the view
+     * @throws IOException
+     */
     private static void loadImage() throws IOException{
         customer = ImageIO.read(new File("restaurant/images/customer1.png"));
         background = ImageIO.read(new File("restaurant/images/restaurantBackground.png"));
