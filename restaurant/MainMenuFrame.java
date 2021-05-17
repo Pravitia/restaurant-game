@@ -5,6 +5,9 @@ import restaurant.message.StartGameMessage;
 import javax.swing.*;
 import java.util.concurrent.BlockingQueue;
 
+/**
+ * Build the View for the Main Menu
+ */
 public class MainMenuFrame extends JFrame {
     BlockingQueue<Message> queue;
 
@@ -14,6 +17,10 @@ public class MainMenuFrame extends JFrame {
 
     JButton playButton;
 
+    /**
+     * Constructor for MainMenuFrame
+     * @param queue Bring the queue into the Main Menu Frame
+     */
     public MainMenuFrame(BlockingQueue<Message> queue)
     {
         this.queue = queue;

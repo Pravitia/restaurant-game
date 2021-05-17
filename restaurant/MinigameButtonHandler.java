@@ -4,17 +4,28 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import javax.swing.JButton;
 
+/**
+ *
+ */
 public class MinigameButtonHandler implements ActionListener {
 
     private ArrayList<JButton> buttons;
     private ArrayList<Food> inventory;
 
+    /**
+     * Constructor for MinigameButtonHandler
+     * @param buttons the list of buttons
+     * @param inventory the list of food in inventory
+     */
     public MinigameButtonHandler (ArrayList<JButton> buttons, ArrayList<Food> inventory) {
         this.buttons = buttons;
         this.inventory = inventory;
     }
 
-    @Override
+    /**
+     * Action performed method to check the minigame buttons
+     * @param e The action event to click the button
+     */
     public void actionPerformed(ActionEvent e) {
 
         
