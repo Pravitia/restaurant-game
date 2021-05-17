@@ -38,7 +38,7 @@ public class GameStartComponent extends JComponent{
      * @throws IOException
      */
     private static void loadImage() throws IOException{
-        background = ImageIO.read(new File("restaurant/images/mainMenuBackground.png"));
+        background = ImageIO.read(new File("restaurant/images/menuBackground.png"));
     }
 
 }
