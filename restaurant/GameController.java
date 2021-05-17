@@ -153,6 +153,9 @@ public class GameController {
         }
     }
 
+    /**
+     * Valve to return back to the manage screen
+     */
     private class BackToManageValve implements Valve {
         public ValveResponse execute(Message message) {
             if (message.getClass() != BackToManageMessage.class) {
@@ -166,6 +169,9 @@ public class GameController {
         }
     }
 
+    /**
+     * Valve to sell food in the minigame
+     */
     private class SellFoodValve implements Valve {
         public ValveResponse execute(Message message) {
             if (message.getClass() != SellFoodMessage.class) {
@@ -196,6 +202,9 @@ public class GameController {
         }
     }
 
+    /**
+     * Valve Interface to work on the execute
+     */
     private interface Valve {
         ValveResponse execute(Message message);
     }
