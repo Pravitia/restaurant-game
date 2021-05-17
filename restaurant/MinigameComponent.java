@@ -21,6 +21,13 @@ public class MinigameComponent extends JComponent{
     public void paintComponent(Graphics g) {
         Graphics2D g2 = (Graphics2D) g;
 
+        try {
+            loadImage();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        g2.drawImage(background, 0, 0, 1500, 1000, null);
+
         Rectangle2D.Double instructionBox = new Rectangle2D.Double(600, 20, 300, 50);
         Rectangle2D.Double displayBox = new Rectangle2D.Double(525,100,450, 450);
 
@@ -29,17 +36,16 @@ public class MinigameComponent extends JComponent{
 
 
 
+
         g2.draw(instructionBox);
-        g2.drawString("Click the food as they show up", 605, 50);
         g2.draw(displayBox);
 
+        g2.setColor(Color.WHITE);
+        g2.drawString("Click the food as they show up", 605, 50);
 
-        try {
-            loadImage();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        g2.drawImage(background, 0, 0, 1500, 1000, null);
+
+
+
         g2.drawImage(customer, 1150, 190, 300, 500, null);
         g2.drawImage(displayFood, 600, 200, 300,300, null);
 
