@@ -33,43 +33,30 @@ public class GachaComponent extends JComponent{
     public void paintComponent(Graphics g){
         Graphics2D g2 = (Graphics2D) g;
 
-        Rectangle2D.Double titleBox = new Rectangle2D.Double(650, 20, 200, 90);
-        g2.setFont(new Font("Arial", Font.BOLD, 50));
-
-        Rectangle2D.Double displayBox = new Rectangle2D.Double(1000, 500, 300, 300);
-
-
-        g2.draw(titleBox);
-        g2.draw(displayBox);
-        g2.setColor(Color.ORANGE);
-        g2.drawString("GACHA", 660 ,80);
-
         try {
             loadImage();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        g2.drawImage(burger, 250, 100, 300, 300, null);
-        g2.drawImage(taco, 400, 200, 250, 250, null);
-        g2.drawImage(hotdog, 250, 280, 300,300, null);
-        g2.drawImage(sushi, 550, 350, 250, 250, null);
-        g2.drawImage(soda, 600, 100, 200, 300, null);
+        g2.drawImage(background, 0, 0, 1500, 1000, null);
+
+        Rectangle2D.Double displayBox = new Rectangle2D.Double(1000, 500, 300, 300);
+
+
+        g2.draw(displayBox);
+
         g2.drawImage(display, 1000, 500, 300, 300, null);
 
     }
 
-    private static BufferedImage burger, taco, hotdog, sushi, soda, display;
+    private static BufferedImage display, background;
 
     /**
      * Load images into the variables
      * @throws IOException
      */
     private static void loadImage() throws IOException{
-       burger = ImageIO.read(new File("restaurant/images/transparentBurgerNew.png"));
-       taco = ImageIO.read(new File("restaurant/images/transparentTacoNew.png"));
-       hotdog = ImageIO.read(new File("restaurant/images/transparentHotdogNew.png"));
-       sushi = ImageIO.read(new File("restaurant/images/transparentSushiNew.png"));
-       soda = ImageIO.read(new File("restaurant/images/transparentSodaNew.png"));
+       background = ImageIO.read(new File("restaurant/images/gachaBackground.png"));
        display = ImageIO.read(new File(filepath));
     }
 
