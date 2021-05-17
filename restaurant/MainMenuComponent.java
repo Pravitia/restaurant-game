@@ -37,7 +37,7 @@ public class MainMenuComponent extends JComponent {
 
         //draw everything
         g2.draw(titleBox);
-        g2.drawString("Restaurant Game", 580 ,70);
+        g2.drawString("Order Overflow", 600 ,70);
         g2.draw(imageBox);
 
         g2.drawImage(titleBurger, 530, 100, 450, 450, null);
