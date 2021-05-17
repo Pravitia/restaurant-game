@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import javax.swing.JButton;
 
 /**
- *
+ * Handles the display of all the buttons for the Minigame
  */
 public class MinigameButtonHandler implements ActionListener {
 

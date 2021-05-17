@@ -62,7 +62,6 @@ public class GameController {
     /**
      * Valves used in MainMenuFrame. For "Play" and "Leaderboard" buttons
      */
-
     private class StartGameValve implements Valve {
         public ValveResponse execute(Message message) {
             if (message.getClass() != StartGameMessage.class) {

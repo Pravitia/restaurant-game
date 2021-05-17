@@ -10,7 +10,9 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.concurrent.BlockingQueue;
 
-
+/**
+ * Make the logic behind Minigame
+ */
 public class MinigameFrame extends JFrame{
     BlockingQueue<Message> queue;
     private ArrayList<Food> playerFood = new ArrayList<>();
@@ -27,7 +29,10 @@ public class MinigameFrame extends JFrame{
     JTextField moneyBar;
     double money = 500;
 
-
+    /**
+     * Constructor for MinigameFrame
+     * @param queue Push the quueue into MinigrameFrame
+     */
     public MinigameFrame(BlockingQueue<Message> queue)
     {
         this.queue = queue;
@@ -46,17 +51,28 @@ public class MinigameFrame extends JFrame{
 
     }
 
+    /**
+     * Updates the Player Food ArrayList and update frame
+     * @param f Food ArrayList
+     */
     public void updatePlayerFood(ArrayList<Food> f){
         playerFood = f;
         updateFrame();
         
     }
 
+    /**
+     * Updates the customer with a new random customer
+     * @param c New customer
+     */
     public void updateCustomer(Customer c){
         currentCustomer = c;
 
     }
 
+    /**
+     * Updates the Frame for the User
+     */
     public void updateFrame(){
 
         for(JButton button : buttonList)
@@ -101,17 +117,28 @@ public class MinigameFrame extends JFrame{
 
     }
 
+    /**
+     * Make the button Handler for the Minigame
+     */
     private class ButtonHandler implements ActionListener {
 
         private ArrayList<JButton> buttons;
         private ArrayList<Food> inventory;
 
+        /**
+         * Constructor for the ButtonHandler
+         * @param buttons List of buttons
+         * @param inventory List of inventory to add to buttons
+         */
         public ButtonHandler (ArrayList<JButton> buttons, ArrayList<Food> inventory) {
             this.buttons = buttons;
             this.inventory = inventory;
         }
 
-        @Override
+        /**
+         * Actionperformed for each button
+         * @param e The action event to attach to the buttons
+         */
         public void actionPerformed(ActionEvent e) {
             for(int i = 0 ; i < buttons.size(); i ++){
                 if (e.getSource() == buttons.get(i)) {
