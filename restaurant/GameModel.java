@@ -18,6 +18,7 @@ public class GameModel {
         this.user = new Player();
         this.roller = new GachaRoll();
         this.newCustomer = new Customer(getUser().getFood());
+        this.filepath = "";
     }
 
     /**

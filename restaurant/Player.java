@@ -39,7 +39,7 @@ public class Player {
      * @return ArrayList of Food from Inventory
      */
     public ArrayList<Food> getFood(){
-        ArrayList<Food> Inventory2 = new ArrayList<Food>(Inventory);
+        ArrayList<Food> Inventory2 = new ArrayList<>(Inventory);
         return Inventory2;
     }
 
@@ -65,7 +65,8 @@ public class Player {
      * When Gacha is rolled, Balance must go down by $100
      */
     public void subtractFromGachaRoll() {
-        balance -= 100;
+        if(balance >= 100)
+            balance -= 100;
     }
     
 
