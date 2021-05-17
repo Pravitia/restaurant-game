@@ -40,7 +40,7 @@ public class MinigameComponent extends JComponent{
             e.printStackTrace();
         }
         g2.drawImage(background, 0, 0, 1500, 1000, null);
-        g2.drawImage(customer, 100, 100, 300, 500, null);
+        g2.drawImage(customer, 1150, 190, 300, 500, null);
         g2.drawImage(displayFood, 600, 200, 300,300, null);
 
 
