@@ -39,6 +39,7 @@ public class MinigameComponent extends JComponent{
         } catch (IOException e) {
             e.printStackTrace();
         }
+        g2.drawImage(background, 0, 0, 1500, 1000, null);
         g2.drawImage(customer, 100, 100, 300, 500, null);
         g2.drawImage(displayFood, 600, 200, 300,300, null);
 
@@ -46,9 +47,10 @@ public class MinigameComponent extends JComponent{
     }
 
 
-    private static BufferedImage customer, displayFood;
+    private static BufferedImage customer, displayFood, background;
     private static void loadImage() throws IOException{
         customer = ImageIO.read(new File("restaurant/images/customer1.png"));
+        background = ImageIO.read(new File("restaurant/images/restaurantBackground.png"));
         //customer = ImageIO.read(new File(filepath));
         displayFood = ImageIO.read(new File(filepath));
     }

@@ -140,6 +140,8 @@ public class GameView extends JFrame {
         }
     }
 
+
+
     /**
      * Changes view from GameStartFrame to RestaurantFrame
      * When it clicks play it goes from GameStartFrame to RestaurantFrame
